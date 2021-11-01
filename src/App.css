@@ -1,6 +1,8 @@
 @import "~antd/dist/antd.css";
-/* .App {
-} */
+
+.photo2 {
+  padding-left: calc(100vw + 737px);
+}
 
 .App-logo {
   height: 40vmin;
