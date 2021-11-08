@@ -4,7 +4,7 @@ import logo from "./assets/S_logo.png";
 import { UserOutlined, QuestionCircleOutlined } from "@ant-design/icons";
 import "./App.css";
 
-const App = () => (
+const Login = () => (
   <div>
     <Row className="row">
       <Col className="Col1" flex={3} style={{ justifyContent: "center" }}>
@@ -70,7 +70,7 @@ const App = () => (
             }}
             size="large"
             type="primary"
-            onClick={() => alert("You pressed")} //arrow function
+            onClick={() => alert("You pressed")}
           >
             <b style={{ fontSize: "20px" }}>Đăng nhập</b>
           </Button>
@@ -120,4 +120,4 @@ const App = () => (
   </div>
 );
 
-export default App;
+export default Login;
