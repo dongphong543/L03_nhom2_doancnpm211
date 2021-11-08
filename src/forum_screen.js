@@ -20,7 +20,7 @@ const Forum = () => (
       src={logo}
       alt="Logo"
       style={{
-        marginTop: "29px",
+        marginTop: "50px",
         marginLeft: "50px",
         height: "38px",
         position: "absolute",
