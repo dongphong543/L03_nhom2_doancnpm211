@@ -97,10 +97,9 @@ const Timetable = () => (
     <img
       src={agenda}
       style={{
-        // z-index = -1,
-        marginLeft: "75vw",
-        marginTop: "-34vh",
-        maxHeight: "40vh",
+        marginLeft: "70vw",
+        marginTop: "-200px",
+        height: "210px",
       }}
     />
     <hr

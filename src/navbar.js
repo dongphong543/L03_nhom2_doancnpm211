@@ -10,91 +10,69 @@ var myCurrentDate = new Date();
 
 
 const App = () => (
-  <div  style={{ overflowX: "hidden" }}>
-    <Row>
-      <Col style={{
-        marginTop: "3vh",
-        marginLeft: "10px",
-        marginRight: "110px",
-        marginBottom: "7vh"
-      }}>
-        <img
-          className="s"
-          src={logo}
-          style={{
-            verticalAlign: "left",
-            height: "7vh",
-            position: "absolute",
-            marginLeft: "23px"
-          }}
-        />
-        
-      </Col>
-      <Col style={{
-        marginRight: "-10vw",
-        marginTop: "3vh",
-        minWidth: "10vw",
-        maxWidth: "70vw",
-      }}>
-        <img
-          className="bluebar" 
-          src={bluebar}
-          style={{
-            position: "absolute",
-            height: "7vh",
-          }}
-        />
-        <figcaption style={{
-          position: "absolute",
-          width: "60vw",
-          marginTop: "1.2vh",
-          marginLeft: "3vw",
+  <div
+    style={{
+      overflowX: "hidden",
+      position: "relative",
+    }}
+  >
+    <img
+      src={logo}
+      style={{
+        marginTop: "20px",
+        marginLeft: "35px",
+        height: "38px",
+        position: "absolute",
+      }}
+    />
+    <div
+      style={{
+        marginTop: "20px",
+        marginLeft: "120px",
+        marginRight: "-1693px",
+        height: "38px",
+        position: "absolute",
+      }}
+    >
+      <span
+        style={{
           color: "white",
-          fontSize: "15px",
-        }}>
-          Ngày <b> {myCurrentDate.getDate()} </b> tháng
-          <b> {myCurrentDate.getMonth()} </b>
-          năm <b> {myCurrentDate.getFullYear()} </b> 
-         
-        </figcaption>
-      <Col style={{
-        marginRight: "-600px",
-        marginTop: "2vh",
-      }}>
-         <Badge count={5} size="small">
+          position: "absolute",
+          marginLeft: "25px",
+          marginTop: "6px",
+          fontSize: "15px"
+        }}
+      >
+        {" "}
+        Ngày <b> {myCurrentDate.getDate()} </b> tháng
+        <b> {myCurrentDate.getMonth()} </b>
+        năm <b> {myCurrentDate.getFullYear()} </b>
+        {/* <Badge count={5} size="small">
           <BellFilled style={{ 
             color: "#4AA0EB",
-            marginLeft: "55vw", 
+            marginLeft: "400px", 
           }} />
-        </Badge> 
-      </Col>
-      
-      </Col>
-      
-      <Col style={{
-        marginLeft: "60vw",
-        marginRight: "-10vw",
-      }}>
-        
-        <img
-          className="redbar"
-          src={redbar}
-          style={{
-            marginTop: "3vh",
-            maxHeight: "7vh",
-            position: "absolute",
-            marginLeft: "-1000px",
-            paddingLeft: "calc(23vw + 737px)",
-          }}
-        />
-        <figcaption style={{
-          position: "absolute",
+        </Badge> */}
+      </span>
+       
+      <img
+        src={bluebar}
+        style={{
+          height: "38px",
+        }}
+      />
+    </div>
+    <div
+      style={{
+        position: "relative",
+        marginTop: "20px",
+      }}
+    >
+      <span style={{
           right: "0px",
-          
-          marginRight: "-33vw",
+          position: "absolute",
           width: "300px",
-          marginTop: "4vh",
-          // marginLeft: "50px",
+          marginTop: "6px",
           color: "white",
           fontSize: "15px",
         }}>
@@ -123,10 +101,21 @@ const App = () => (
               Xin chào, <b> Nguyễn Văn A <CaretDownOutlined /> </b>
             </div>
           </Dropdown>
-        </figcaption>
-        </Col>  
-    </Row>
-</div>
+        </span>
+
+      <img
+        src={redbar}
+        style={{
+          marginLeft: "-1090px",
+          height: "38px",
+          paddingLeft: "calc(100vw + 737px)"
+      }}
+      />
+    
+      
+      
+    </div>
+    </div>
 );
 
 export default App;

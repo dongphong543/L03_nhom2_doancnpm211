@@ -19,14 +19,13 @@ const join_class = () => {
             <img
             src={join}
             style={{
-                marginLeft: "75vw",
-                marginTop: "-35vh",
-                maxHeight: "40vh",
+                marginLeft: "70vw",
+                marginTop: "-200px",
+                height: "210px",
             }}
             />
             <hr
             style={{
-                // marginTop: "-4vh",
                 backgroundColor: "#eee",
                 height: 0.05,
                 width: "auto",
