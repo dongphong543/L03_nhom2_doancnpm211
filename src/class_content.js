@@ -73,19 +73,19 @@ const Class_content = () => {
                 marginLeft: "10vw",
                 marginTop: "5vh",
             }}>  
-            <b style={{ fontSize: "40px" }}> Nội dung lớp học </b>  
-            <br />
-            <b style={{ fontSize: "20px" }}>
-                829717313 - Toán 11 - Nguyễn Thị A
-            </b>  
+                <b style={{ fontSize: "40px" }}> Nội dung lớp học </b>  
+                <br />
+                <b style={{ fontSize: "20px" }}>
+                    829717313 - Toán 11 - Nguyễn Thị A
+                </b>  
             </div>
             <img
-            src={board}
-            style={{
-                marginLeft: "75vw",
-                marginTop: "-34vh",
-                maxHeight: "40vh",
-            }}
+                src={board}
+                style={{
+                    marginLeft: "70vw",
+                    marginTop: "-200px",
+                    height: "210px",
+                }}
             />
             <hr
             style={{
