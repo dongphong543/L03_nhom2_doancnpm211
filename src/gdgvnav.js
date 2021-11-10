@@ -153,7 +153,6 @@ const App = () => (
         overflowX: "hidden",
         overflowY: "hidden",
         zIndex: '1',
-        opacity: 0.5,
       }}
     />
     <hr

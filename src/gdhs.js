@@ -7,12 +7,10 @@ import aplus from "./assets/icon_aplus.png";
 import board from "./assets/icon_board.png";
 import male from "./assets/icon_male.png";
 
-import "./App.css"
-
 const style={
   marginTop: "5vh",
-  marginLeft: "27vh",
-  marginRight: "-12vh"
+  marginLeft: "22vh",
+  marginRight: "-17vh"
 };
 
 const App = () => {

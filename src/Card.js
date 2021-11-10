@@ -6,13 +6,15 @@ const CardC = ({link, text}) => {
         <div onClick={() => alert("You clicked")}>
             <Card style={{
                 padding: '7px',
-                width: '130px',
+                width: '180px',
                 height: '115px',
                 textAlign: 'center',
                 borderRadius: "8px",
                 border: "groove",
                 borderWidth: '0px',
                 borderColor: 'snow',
+                //marginLeft: "auto",
+                //marginRight: "auto",
                 boxShadow: "0px 3px 8px 1px rgba(210, 210, 210, 0.6)",
                 color: '#1F468B'
                 }}

@@ -8,12 +8,10 @@ import female from "./assets/icon_female.png";
 import plus from "./assets/icon_plus.png";
 import students from "./assets/icon_students.png";
 
-import "./App.css"
-
 const style={
   marginTop: "5vh",
-  marginLeft: "27vh",
-  marginRight: "-12vh"
+  marginLeft: "22vh",
+  marginRight: "-17vh"
 };
 
 const App = () => {

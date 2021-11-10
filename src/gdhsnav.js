@@ -136,7 +136,7 @@ const App = () => (
       </b> 
       <br />
       <div style={{ fontSize: "22px", position: 'relative', zIndex: '3'}}>
-      Từ nay việc dạy học trở nên gần gũi và hiệu quả hơn bao giờ hết
+      Từ nay việc học trở nên dễ dàng và ngăn nắp hơn bao giờ hết
       </div> 
     </div>
     <img
@@ -149,7 +149,6 @@ const App = () => (
         overflowX: "hidden",
         overflowY: "hidden",
         zIndex: '1',
-        opacity: 0.4,
       }}
     />
     <hr
