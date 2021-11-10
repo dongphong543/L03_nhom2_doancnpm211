@@ -4,12 +4,11 @@ import { Row, Col, Badge, Menu, Dropdown, message } from "antd";
 import sletter from "./assets/S_letter.png";
 import bluebar from "./assets/blue_bar.png";
 import redbar from "./assets/red_bar.png";
-import board from "./assets/icon_board.png";
+import student from "./assets/stu_backgr.jpg";
 import {FileDoneOutlined, UserOutlined, CloseOutlined, CaretDownOutlined, BellFilled} from "@ant-design/icons";
 
 var myCurrentDate = new Date();  
 
-const style = { background: '#0092ff', padding: '8px 0' };
 const App = () => (
   <div style={{ overflowX: "hidden", overflowY: 'hidden'}}>
     <Row>
@@ -25,6 +24,7 @@ const App = () => (
             verticalAlign: "left",
             height: "7vh",
             position: "absolute",
+            zIndex: '3'
           }}
         />
         
@@ -41,6 +41,7 @@ const App = () => (
           style={{
             position: "absolute",
             height: "7vh",
+            zIndex: '3'
           }}
         />
         <figcaption style={{
@@ -50,6 +51,7 @@ const App = () => (
           marginLeft: "3vw",
           color: "white",
           fontSize: "15px",
+          zIndex: '3'
         }}>
           Ngày&nbsp; <b> {myCurrentDate.getDate()} </b> &nbsp;tháng
           &nbsp;<b> {myCurrentDate.getMonth()} </b> &nbsp;
@@ -60,10 +62,12 @@ const App = () => (
           marginRight: "-600px",
           marginTop: "2vh",
         }}>
-          <Badge count={5} size="small">
+          <Badge count={5} size="small" style={{zIndex: '5', position: '-webkit-sticky'}}>
             <BellFilled style={{ 
               color: "#4AA0EB",
               marginLeft: "55vw", 
+              zIndex: '5',
+              position: 'relative'
             }} />
           </Badge> 
         </Col>
@@ -81,6 +85,7 @@ const App = () => (
             position: "absolute",
             marginLeft: "-1000px",
             paddingLeft: "calc(23vw + 737px)",
+            zIndex: '3'
           }}
         />
         <figcaption style={{
@@ -97,7 +102,7 @@ const App = () => (
           <Dropdown overlay={(
             <Menu onClick={ ({ key }) => {
               message.info(`Click on ${key}`)}}
-              style={{ width: "150px", marginLeft: "3vw", marginTop: "1vh", zIndex: '3'}}
+              style={{ width: "120px", marginLeft: "3vw", marginTop: "1vh", zIndex: '3'}}
               >
               <Menu.Item key="Cá nhân">
                 <UserOutlined style={{marginRight: "1vw"}}/> 
@@ -105,11 +110,7 @@ const App = () => (
               </Menu.Item>
               <Menu.Item key="Bảng điểm">
                 <FileDoneOutlined style={{marginRight: "1vw"}} /> 
-                Quản lý lớp học
-              </Menu.Item>
-              <Menu.Item key="Bảng điểm">
-                <FileDoneOutlined style={{marginRight: "1vw"}} /> 
-                Tạo lớp học
+                Bảng điểm
               </Menu.Item>
               <Menu.Item key="Đăng xuất" style={{ color: "red" }}>
                 <CloseOutlined style={{marginRight: "1vw"}} /> 
@@ -118,7 +119,7 @@ const App = () => (
             </Menu>)}
           >
             <div style={{
-              
+              zIndex: '3'
             }}>
               Xin chào, <b> Nguyễn Văn A <CaretDownOutlined /> </b>
             </div>
@@ -128,23 +129,27 @@ const App = () => (
     </Row>
     <div style={{ 
         marginLeft: "10vw",
-        marginTop: "10vh",
+        marginTop: "8vh",
       }}>  
-      <b style={{ fontSize: "40px" }}>
-        Quản lý lớp học
-      </b>  
+      <b style={{ fontSize: "45px", position: 'relative', zIndex: '3'}}>
+        Steasy!
+      </b> 
+      <br />
+      <div style={{ fontSize: "22px", position: 'relative', zIndex: '3'}}>
+      Từ nay việc dạy học trở nên gần gũi và hiệu quả hơn bao giờ hết
+      </div> 
     </div>
     <img
       className="ttb"
-      src={board}
+      src={student}
       style={{
-        marginLeft: "75vw",
-        marginTop: "-32vh",
-        marginBottom: "-6vh",
-        maxHeight: "40vh",
+        marginTop: "-37vh",
+        marginBottom: "-10vh",
+        maxHeight: "60vh",
         overflowX: "hidden",
         overflowY: "hidden",
-        zIndex: '1'
+        zIndex: '1',
+        opacity: 0.4,
       }}
     />
     <hr

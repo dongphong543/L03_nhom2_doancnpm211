@@ -1,14 +1,11 @@
 import React from "react";
 import { Row, Col, Badge, Menu, Dropdown, message } from "antd";
-import "./App.css";
 
 import sletter from "./assets/S_letter.png";
 import bluebar from "./assets/blue_bar.png";
 import redbar from "./assets/red_bar.png";
 import aplus from "./assets/icon_aplus.png";
 import {FileDoneOutlined, UserOutlined, CloseOutlined, CaretDownOutlined, BellFilled} from "@ant-design/icons";
-
-import "./navbar.css"
 
 var myCurrentDate = new Date();  
 
