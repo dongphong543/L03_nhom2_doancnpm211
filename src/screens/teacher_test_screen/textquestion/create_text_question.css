@@ -1,0 +1,13 @@
+.create-question {
+  width: 80vw;
+  background-color: #dad6e0de;
+  margin: 20px auto 20px auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.question-container {
+  flex-grow: 10;
+}
+

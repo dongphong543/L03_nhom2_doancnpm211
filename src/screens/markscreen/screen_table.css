@@ -1,0 +1,64 @@
+.screen-table {
+  /* background-color: aquamarine; */
+  box-shadow: rgba(0, 0, 0, 0.22) 0px -5px 10px 0px;
+  height: 70vh;
+}
+.grade-table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+th {
+  background-color: #1f468b;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid gray;
+}
+
+.school-year {
+  background-color: #ffffff;
+  color: #1f468b;
+  border: none;
+}
+
+td {
+  background-color: #ffffff;
+  min-height: fit-content;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid gray;
+}
+
+td:empty::after {
+  content: "\00a0";
+}
+
+.subject {
+  color: #1f468b;
+}
+
+@media only screen and (max-width:700px) {
+  .grade-table{
+    width: 100%;
+  }
+  th{
+    font-size: 16px;
+    font-weight: 400;
+  }
+  td{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width:500px) {
+  .grade-table{
+    width: 100%;
+  }
+  th{
+    font-size: 14px;
+  }
+  td{
+    font-size: 14px;
+  }
+}
