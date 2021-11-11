@@ -75,7 +75,7 @@ const Class_content = () => {
   };
 
   return (
-    <div style={{ overflowX: "hidden" }}>
+    <div>
       <Nav />
       <div
         style={{
@@ -90,9 +90,9 @@ const Class_content = () => {
       <img
         src={board}
         style={{
-          marginLeft: "75vw",
-          marginTop: "-34vh",
-          maxHeight: "40vh",
+          marginLeft: "70vw",
+          marginTop: "-200px",
+          height: "210px",
         }}
       />
       <hr
