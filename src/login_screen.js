@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col, Card, Input, Button } from "antd";
 import logo from "./assets/S_logo.png";
 import { UserOutlined, QuestionCircleOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom"; // v6
 import "./App.css";
 
 export default function Login() {
@@ -16,8 +17,8 @@ export default function Login() {
             style={{
               verticalAlign: "middle",
               marginTop: "20vh",
-              marginLeft: "5vw",
-              marginRight: "5vw",
+              marginLeft: "8vw",
+              marginRight: "2vw",
               marginBottom: "-5vh",
               maxWidth: "40vw",
             }}
@@ -60,21 +61,23 @@ export default function Login() {
               style={{ height: "50px", borderRadius: "8px", marginTop: "10px" }}
             />
             <br />
-            <Button
-              style={{
-                borderRadius: "8px",
-                backgroundColor: "#1F468B",
-                borderColor: "#1F468B",
-                width: "350px",
-                height: "50px",
-                marginTop: "10px",
-              }}
-              size="large"
-              type="primary"
-              onClick={() => alert("You pressed")}
-            >
-              <b style={{ fontSize: "20px" }}>Đăng nhập</b>
-            </Button>
+            <Link to="/shome">
+              <Button
+                style={{
+                  borderRadius: "8px",
+                  backgroundColor: "#1F468B",
+                  borderColor: "#1F468B",
+                  width: "350px",
+                  height: "50px",
+                  marginTop: "10px",
+                }}
+                size="large"
+                type="primary"
+                // onClick={() => alert("You pressed")}
+              >
+                <b style={{ fontSize: "20px" }}>Đăng nhập</b>
+              </Button>
+            </Link>
             <br />
             <Button
               style={{
@@ -83,7 +86,9 @@ export default function Login() {
               }}
               size="large"
               type="link"
-              onClick={() => alert("You pressed")}
+              onClick={() =>
+                alert("Mật khẩu mới đã được gửi đến email ng********@*****.**m")
+              }
             >
               <span style={{ fontSize: "15px" }}>Quên mật khẩu? </span>
             </Button>
@@ -97,18 +102,20 @@ export default function Login() {
               }}
             />
             <span style={{ color: "#1F468B" }}>Chưa có tài khoản?</span>
-            <Button
-              style={{
-                color: "#1F468B",
-                marginLeft: "-10px",
-                marginRight: "-20px",
-              }}
-              size="large"
-              type="link"
-              onClick={() => alert("You pressed")}
-            >
-              <b>Tạo tài khoản mới</b>
-            </Button>
+            <Link to="signup">
+              <Button
+                style={{
+                  color: "#1F468B",
+                  marginLeft: "-10px",
+                  marginRight: "-20px",
+                }}
+                size="large"
+                type="link"
+                // onClick={() => alert("You pressed")}
+              >
+                <b>Tạo tài khoản mới</b>
+              </Button>
+            </Link>
           </Card>
         </Col>
       </Row>

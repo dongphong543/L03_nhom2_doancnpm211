@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Menu, Dropdown, message, Badge } from "antd";
+import { Menu, Dropdown, message, Badge } from "antd";
 import {
   FileDoneOutlined,
   UserOutlined,
@@ -7,6 +7,7 @@ import {
   CaretDownOutlined,
   BellFilled,
 } from "@ant-design/icons";
+import { Link } from "react-router-dom"; // v6
 
 import logo from "./assets/S_letter.png";
 import bluebar from "./assets/blue_bar.png";
@@ -91,18 +92,26 @@ const App = () => (
               }}
               style={{ width: "120px", marginLeft: "3vw", marginTop: "1vh" }}
             >
-              <Menu.Item key="Cá nhân">
-                <UserOutlined style={{ marginRight: "1vw" }} />
-                Cá nhân
-              </Menu.Item>
-              <Menu.Item key="Bảng điểm">
-                <FileDoneOutlined style={{ marginRight: "1vw" }} />
-                Bảng điểm
-              </Menu.Item>
-              <Menu.Item key="Đăng xuất" style={{ color: "red" }}>
-                <CloseOutlined style={{ marginRight: "1vw" }} />
-                Đăng xuất
-              </Menu.Item>
+              <Link to="/info">
+                <Menu.Item key="Cá nhân">
+                  <UserOutlined style={{ marginRight: "1vw" }} />
+                  Cá nhân
+                </Menu.Item>{" "}
+              </Link>
+
+              <Link to="/ptstable">
+                <Menu.Item key="Bảng điểm">
+                  <FileDoneOutlined style={{ marginRight: "1vw" }} />
+                  Bảng điểm
+                </Menu.Item>{" "}
+              </Link>
+
+              <Link to="/">
+                <Menu.Item key="Đăng xuất" style={{ color: "red" }}>
+                  <CloseOutlined style={{ marginRight: "1vw" }} />
+                  Đăng xuất
+                </Menu.Item>{" "}
+              </Link>
             </Menu>
           }
         >

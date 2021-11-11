@@ -1,5 +1,7 @@
-import CardC from './Card'
-import Gdgvnav from './gdgvnav'
+import CardC from "./Card";
+import Gdgvnav from "./gdgvnav";
+
+import { Link } from "react-router-dom"; // v6
 
 import { Row, Col } from "antd";
 import agenda from "./assets/icon_agenda.png";
@@ -8,19 +10,33 @@ import female from "./assets/icon_female.png";
 import plus from "./assets/icon_plus.png";
 import students from "./assets/icon_students.png";
 
-const style={
+const style = {
   marginTop: "5vh",
   marginLeft: "22vh",
-  marginRight: "-17vh"
+  marginRight: "-17vh",
 };
 
 const App = () => {
   return (
     <div className="App">
       <Gdgvnav />
+      <hr
+        style={{
+          backgroundColor: "#eee",
+          height: 0.05,
+          width: "auto",
+          position: "relative",
+          borderColor: "transparent",
+          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
+          zIndex: "2",
+          marginTop: "-1px",
+        }}
+      />
       <Row>
         <Col style={style}>
-          <CardC link={board} text="Lớp học" />
+          <Link to="/class">
+            <CardC link={board} text="Lớp học" />{" "}
+          </Link>
         </Col>
         <Col style={style}>
           <CardC link={plus} text="Tạo lớp học" />
@@ -37,6 +53,6 @@ const App = () => {
       </Row>
     </div>
   );
-}
+};
 
 export default App;

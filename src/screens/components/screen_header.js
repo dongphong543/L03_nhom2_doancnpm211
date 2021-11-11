@@ -4,6 +4,7 @@ import { CaretDownFilled } from "@ant-design/icons";
 import logo from "../../assets/S_letter.png";
 import { BellFilled } from "@ant-design/icons";
 import { Button } from "antd";
+import Nav from "../../navbar";
 import "antd/dist/antd.css";
 
 function ScreenHeader(props) {
@@ -14,7 +15,7 @@ function ScreenHeader(props) {
 
   return (
     <div className="header">
-      <div className="navbar">
+      {/* <div className="navbar">
         <div className="navbar-item logo">
           <img src={logo} alt="logo" height="40px" />
         </div>
@@ -43,8 +44,22 @@ function ScreenHeader(props) {
             </Button>
           </div>
         </div>
+      </div> */}
+      <Nav />
+
+      <div
+        id="title"
+        style={{
+          marginTop: "25px",
+          // marginLeft: "150px",
+          marginBottom: "25px",
+          fontSize: "48px",
+          fontWeight: "bold",
+          color: "#222",
+        }}
+      >
+        {props.name}
       </div>
-      <h1 id="title">{props.name}</h1>
     </div>
   );
 }
