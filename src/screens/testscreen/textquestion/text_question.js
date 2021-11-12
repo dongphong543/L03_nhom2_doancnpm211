@@ -7,7 +7,7 @@ function TextQuestion() {
     <div className="text-question-container">
       <div>
         <span className="text-question-number">{"Câu 1: "}</span>
-        <span className="text-question">{"Nội dung câu hỏi"}</span>
+        <span className="text-question">{"Cho biết gió bắt đầu từ đâu?"}</span>
       </div>
       <TextArea
         rows="5"

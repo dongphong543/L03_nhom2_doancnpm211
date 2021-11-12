@@ -5,16 +5,16 @@ import { Checkbox, Row } from "antd";
 
 function MultiChoiceQuestion() {
   const plainOptions = [
-    "Câu trả lời 1",
-    "Câu trả lời 2",
-    "Câu trả lời 3",
-    "Câu trả lời 4",
+    "Trung Quốc",
+    "Lào",
+    "Campuchia",
+    "Thái Lan",
   ];
   return (
     <div className="multichoice-question-container">
       <div>
         <span className="multichoice-question-number">{"Câu 3: "}</span>
-        <span className="multichoice-question">{"Nội dung câu hỏi"}</span>
+        <span className="multichoice-question">{"Nước ta có hơn 4600 km đường biên giới trên đất liền, giáp với các nước"}</span>
       </div>
       <div className="multichoice-answer-container">
         <Checkbox.Group className="answer">
