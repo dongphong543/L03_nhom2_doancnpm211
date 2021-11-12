@@ -6,6 +6,7 @@ import "./student_test_screen.css";
 import { Button } from "antd";
 import "antd/dist/antd.css";
 import ScreenHeader from "../components/screen_header";
+import NavBar from '../../navbar'
 
 function StudentTestScreen() {
   function submit() {
