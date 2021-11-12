@@ -247,12 +247,12 @@ const Room = () => {
               }}
             >
               <FileFilled style={{ color: "#1F468B", fontSize: "25px" }}  />{" "}
-            <a
+            <Link to = "/testui"
               style={{ color: "#2E75A8", fontSize: "17px", marginLeft: "2vw" }}
               // href=""
             >
               Bài kiểm tra số 1
-            </a>
+            </Link>
             </h3>
           <br />
         </div>
