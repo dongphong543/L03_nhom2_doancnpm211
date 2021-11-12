@@ -1,13 +1,19 @@
 import React from "react";
-import { Row, Col, Menu, Dropdown, message, Badge } from "antd";
-import {FileDoneOutlined, UserOutlined, CloseOutlined, CaretDownOutlined, BellFilled} from "@ant-design/icons";
+import { Menu, Dropdown, message, Badge } from "antd";
+import {
+  FileDoneOutlined,
+  UserOutlined,
+  CloseOutlined,
+  CaretDownOutlined,
+  BellFilled,
+} from "@ant-design/icons";
+import { Link } from "react-router-dom"; // v6
 
 import logo from "./assets/S_letter.png";
 import bluebar from "./assets/blue_bar.png";
 import redbar from "./assets/red_bar.png";
 
-var myCurrentDate = new Date();  
-
+var myCurrentDate = new Date();
 
 const App = () => (
   <div
@@ -40,7 +46,7 @@ const App = () => (
           position: "absolute",
           marginLeft: "25px",
           marginTop: "6px",
-          fontSize: "15px"
+          fontSize: "15px",
         }}
       >
         {" "}
@@ -54,7 +60,7 @@ const App = () => (
           }} />
         </Badge> */}
       </span>
-       
+
       <img
         src={bluebar}
         style={{
@@ -68,54 +74,67 @@ const App = () => (
         marginTop: "20px",
       }}
     >
-      <span style={{
+      <span
+        style={{
           right: "0px",
           position: "absolute",
           width: "300px",
           marginTop: "6px",
           color: "white",
           fontSize: "15px",
-        }}>
-          <Dropdown overlay={(
-            <Menu onClick={ ({ key }) => {
-              message.info(`Click on ${key}`)}}
-              style={{ width: "120px", marginLeft: "3vw", marginTop: "1vh"}}
-              >
-              <Menu.Item key="Cá nhân">
-                <UserOutlined style={{marginRight: "1vw"}}/> 
-                Cá nhân
-              </Menu.Item>
-              <Menu.Item key="Bảng điểm">
-                <FileDoneOutlined style={{marginRight: "1vw"}} /> 
-                Bảng điểm
-              </Menu.Item>
-              <Menu.Item key="Đăng xuất" style={{ color: "red" }}>
-                <CloseOutlined style={{marginRight: "1vw"}} /> 
-                Đăng xuất
-              </Menu.Item>
-            </Menu>)}
-          >
-            <div style={{
-              
-            }}>
-              Xin chào, <b> Nguyễn Văn A <CaretDownOutlined /> </b>
-            </div>
-          </Dropdown>
-        </span>
+        }}
+      >
+        <Dropdown
+          overlay={
+            <Menu
+              onClick={({ key }) => {
+                message.info(`Click on ${key}`);
+              }}
+              style={{ width: "120px", marginLeft: "3vw", marginTop: "1vh" }}
+            >
+              <Link to="/info">
+                <Menu.Item key="Cá nhân">
+                  <UserOutlined style={{ marginRight: "1vw" }} />
+                  Cá nhân
+                </Menu.Item>{" "}
+              </Link>
+
+              <Link to="/ptstable">
+                <Menu.Item key="Bảng điểm">
+                  <FileDoneOutlined style={{ marginRight: "1vw" }} />
+                  Bảng điểm
+                </Menu.Item>{" "}
+              </Link>
+
+              <Link to="/">
+                <Menu.Item key="Đăng xuất" style={{ color: "red" }}>
+                  <CloseOutlined style={{ marginRight: "1vw" }} />
+                  Đăng xuất
+                </Menu.Item>{" "}
+              </Link>
+            </Menu>
+          }
+        >
+          <div style={{}}>
+            Xin chào,{" "}
+            <b>
+              {" "}
+              Nguyễn Văn A <CaretDownOutlined />{" "}
+            </b>
+          </div>
+        </Dropdown>
+      </span>
 
       <img
         src={redbar}
         style={{
           marginLeft: "-1090px",
           height: "38px",
-          paddingLeft: "calc(100vw + 737px)"
-      }}
+          paddingLeft: "calc(100vw + 737px)",
+        }}
       />
-    
-      
-      
     </div>
-    </div>
+  </div>
 );
 
 export default App;
