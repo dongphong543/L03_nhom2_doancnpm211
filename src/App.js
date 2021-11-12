@@ -1,17 +1,20 @@
-import React from "react";
-import TeacherScreen from "./screens/teacher_test_screen/teacher_screen";
-import StudentTestScreen from "./screens/testscreen/sutdent_test_screen";
-import StuGradeTable from "./screens/markscreen/stu_screen_table";
-import TeaMarkScreen from "./screens/markscreen/tea_screen_table";
+import "./App.css";
+import Login from "./login_screen";
+import Signup from "./signup_screen";
+import Forum from "./forum_screen";
+import Timetable from "./timetable";
+import Join from "./join_class"
+import Class from "./class_content"
+import Room from "./Room"
+import Info_screen from "./Info_screen";
 function App() {
-  return (
-    <div>
-      {/* <StuGradeTable></StuGradeTable> */}
-      {/* <TeaMarkScreen></TeaMarkScreen> */}
-      <StudentTestScreen></StudentTestScreen>
-      {/* <TeacherScreen></TeacherScreen> */}
-    </div>
-  );
+  // return <Login />;
+  // return <Signup />;
+  // return <Forum />;
+  //return <Join />
+  // return <Timetable />
+  return <Class />
+  //return <Room/>
 }
 
 export default App;
