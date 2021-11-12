@@ -6,9 +6,9 @@ import TeaMarkScreen from "./screens/markscreen/tea_screen_table";
 function App() {
   return (
     <div>
-      {/* <StuGradeTable></StuGradeTable> */}
+      <StuGradeTable></StuGradeTable>
       {/* <TeaMarkScreen></TeaMarkScreen> */}
-      <StudentTestScreen></StudentTestScreen>
+      {/* <StudentTestScreen></StudentTestScreen> */}
       {/* <TeacherScreen></TeacherScreen> */}
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import "./screen_table.css";
 import ScreenHeader from "../components/screen_header";
-import { Table} from 'antd'
+import { Table } from 'antd'
 function StuGradeTable() {
   const { Column, ColumnGroup } = Table;
   const data = [
@@ -34,7 +34,7 @@ function StuGradeTable() {
     <div>
       <ScreenHeader name="Bảng Điểm"></ScreenHeader>
       <div style={{ width: "80%", marginLeft: "auto", marginRight: "auto", padding: '10px' }}>
-        <Table dataSource={data} bordered>
+        <Table dataSource={data} >
           <ColumnGroup title="Năm học 2021 - 2022" align="center" b>
             <Column title="Tên môn học" align="center" dataIndex='sname' ></Column>
             <Column title="15'" align='center' dataIndex='g151'></Column>

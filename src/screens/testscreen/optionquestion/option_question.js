@@ -14,7 +14,7 @@ function OptionQuestion() {
     <div className="option-question-container">
       <div>
         <span className="option-question-number">{"Câu 2: "}</span>
-        <span className="option-question">{"Nội dung câu hỏi"}</span>
+        <span className="option-question">{"Tính thoái hóa của mã di truyền là hiện tượng nhiều bộ ba khác nhau cùng mã hóa cho một loại axit amin. Những mã di truyền nào sau đây không có tính thoái hóa?"}</span>
       </div>
       <div className="option-answer-container">
         <Radio.Group
@@ -30,16 +30,16 @@ function OptionQuestion() {
           }}
         >
           <Row>
-            <Radio value={1}>Câu trả lời 1</Radio>
+            <Radio value={1}>5’AUG3’, 5’UGG3’</Radio>
           </Row>
           <Row>
-            <Radio value={2}>Câu trả lời 2</Radio>
+            <Radio value={2}>5’XAG3’, 5’AUG3’</Radio>
           </Row>
           <Row>
-            <Radio value={3}>Câu trả lời 3</Radio>
+            <Radio value={3}>5’UUU3’, 5’AUG3’</Radio>
           </Row>
           <Row>
-            <Radio value={4}>Câu trả lời 4</Radio>
+            <Radio value={4}>5’UXG3’. 5’AGX3’</Radio>
           </Row>
         </Radio.Group>
       </div>
