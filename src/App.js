@@ -14,7 +14,7 @@ import Bangdiem from "./screens/markscreen/stu_screen_table";
 import NForum from "./NEW forum_screen";
 import StuUI from "./gdhs";
 import TeaUI from "./gdgv";
-import TestScreen from "./screens/testscreen/sutdent_test_screen"
+import TestScreen from "./screens/testscreen/sutdent_test_screen";
 function App() {
   return (
     // return <Login />;
@@ -32,7 +32,6 @@ function App() {
       <div>
         <Routes>
           <Route exact path="/" element={<Login />} />
-          {/* <Route exact path="/login" element={<Login />} /> */}
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/shome" element={<StuUI />} />
           <Route exact path="/home" element={<TeaUI />} />
@@ -44,7 +43,7 @@ function App() {
           <Route exact path="/ptstable" element={<Bangdiem />} />
           <Route exact path="/info" element={<Info_screen />} />
           <Route exact path="/subject" element={<SubjectScreen />} />
-          <Route exact path="/testui" element={<TestScreen/>}/>
+          <Route exact path="/testui" element={<TestScreen />} />
         </Routes>
       </div>
     </Router>
