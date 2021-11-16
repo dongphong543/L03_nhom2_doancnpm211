@@ -14,7 +14,7 @@ import Bangdiem from "./screens/markscreen/stu_screen_table";
 import NForum from "./NEW forum_screen";
 import StuUI from "./gdhs";
 import TeaUI from "./gdgv";
-import TestScreen from "./screens/testscreen/sutdent_test_screen";
+import TestScreen from "./screens/testscreen/student_test_screen";
 function App() {
   return (
     // return <Login />;
