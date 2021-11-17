@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Button, Menu, List } from "antd";
 import { CaretDownOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 import Navb from './navbar'
 import board from "./assets/icon_board.png";
 const { SubMenu } = Menu;
@@ -59,14 +60,13 @@ const App = () => (
       <img
         src={board}
         style={{
-          marginLeft: "70vw",
-          marginTop: "-170px",
+          marginLeft: "75vw",
+          marginTop: "-157px",
           height: "210px",
         }}
       />
       <hr
         style={{
-          // marginTop: "vh",
           backgroundColor: "#eee",
           height: 0.05,
           width: "auto",
@@ -93,7 +93,7 @@ const App = () => (
                 }}
                 mode='inline'
                 expandIcon={<CaretDownOutlined style={styleIcon}/>}
-                onClick={() => alert("You clicked")}
+                onClick={() => alert("You pressed")}
             >
                 <SubMenu 
                     title="829717313 - Toán 11 - Nguyễn Thị A"
@@ -105,47 +105,39 @@ const App = () => (
             </Menu>
         </Row>
         <Row>
-        <Button
-          style={{
-            // borderRadius: "8px",
-            backgroundColor: "#1F468B",
-            borderColor: "#1F468B",
-            height: "45px",
-            width: "200px",
-            marginTop: "20px",
-            marginLeft: "10vw",
-          }}
-          size="large"
-          type="primary"
-          onClick={() => alert("You pressed")}
-        >
+        <Link to="/markmanage">
+            <Button
+                style={{
+                    borderRadius: "8px",
+                    backgroundColor: "#1F468B",
+                    borderColor: "#1F468B",
+                    height: "45px",
+                    width: "200px",
+                    marginTop: "20px",
+                    marginLeft: "10vw",
+                }}
+                size="large"
+                type="primary"
+            >
                 Bảng điểm
             </Button>
+        </Link>
         </Row>
         <Row>
             <div style={{
                 zIndex: '1',
-                display: 'block',
                 width: "80vw",
-                // padding: 15,
-                // backgroundColor: 'SteelBlue',
                 marginTop: "30px",
                 marginLeft: "10vw",
                 height: "500px",
-                // borderColor: "#1F468B",
-                // boxShadow: "5px 8px 24px 5px rgba(210, 210, 210, 0.6)",
             }}>
                 <b style={{ fontSize: "25px", color: "#1F468B" }}>Danh sách học sinh</b> <br />
                 <List
                     style={{
-                        // color: 'green',
-                        // backgroundColor: '#f4f4f4',
-                        // height: "50px",
-                        // borderColor: "black",
                         fontSize: "17px"
                     }}
                     split='true'
-                    bordered
+                    bordered={true}
                     dataSource={[
                         'Nguyễn Văn A - 15337890',
                         'Nguyễn Văn B - 15337891',
@@ -156,16 +148,16 @@ const App = () => (
                         'Nguyễn Văn G - 15337896',
                     ]}
                     renderItem={item => (   
-                    <List.Item
-                        extra={
-                        <List>
-                            <Button style={styleButton1} onClick={() => alert("You kicked")}>Kick</Button>
-                            <Button style={styleButton2} onClick={() => alert("You baned")}>Ban</Button>
-                        </List>
-                        }
-                    >
-                        {item}
-                    </List.Item>
+                        <List.Item
+                            extra={
+                            <List>
+                                <Button style={styleButton1} onClick={() => alert("You kicked")}>Kick</Button>
+                                <Button style={styleButton2} onClick={() => alert("You baned")}>Ban</Button>
+                            </List>
+                            }
+                        >
+                            {item}
+                        </List.Item>
                     )}
                 />
             </div>

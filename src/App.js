@@ -14,6 +14,8 @@ import Bangdiem from "./screens/markscreen/stu_screen_table";
 import NForum from "./NEW forum_screen";
 import StuUI from "./gdhs";
 import TeaUI from "./gdgv";
+import ClassManage from "./qllh";
+import MarkManage from "./qld";
 import TestScreen from "./screens/testscreen/student_test_screen";
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
           <Route exact path="/info" element={<Info_screen />} />
           <Route exact path="/subject" element={<SubjectScreen />} />
           <Route exact path="/testui" element={<TestScreen />} />
+          <Route exact path="/classmanage" element={<ClassManage />} />
+          <Route exact path="/markmanage" element={<MarkManage />} />
         </Routes>
       </div>
     </Router>

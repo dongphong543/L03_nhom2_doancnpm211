@@ -156,57 +156,47 @@ function App () {
         <div>
             <Navbar />
             <div
-        style={{
-          marginLeft: "10vw",
-          marginTop: "5vh",
-        }}
-      >
-        <b style={{ fontSize: "40px" }}> Quản lý điểm </b>
-        <br />
-      </div>
-      <img
-        src={plus}
-        style={{
-          marginLeft: "77vw",
-          marginTop: "-187px",
-          height: "210px",
-        }}
-      />
-      <hr
-        style={{
-          // marginTop: "vh",
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-        }}
-      />
+                style={{
+                marginLeft: "10vw",
+                marginTop: "5vh",
+                }}
+            >
+            <b style={{ fontSize: "40px" }}> Quản lý điểm </b>
+            <br />
+            </div>
+            <img
+                src={plus}
+                style={{
+                marginLeft: "77vw",
+                marginTop: "-187px",
+                height: "210px",
+                }}
+            />
+            <hr
+                style={{
+                    backgroundColor: "#eee",
+                    height: 0.05,
+                    width: "auto",
+                    borderColor: "transparent",
+                    boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
+                }}
+            />
             <div style={{
-                borderRadius: '8px',
-                display: 'block',
                 width: "70vw",
-                padding: 15,
-                // backgroundColor: 'SteelBlue',
-                marginTop: '30px',
-                marginLeft: '100px',
-                height: "100px",
+                marginTop: '5vw',
+                marginLeft: '10vw',
+                marginRight: '10vw',
+                height: "25vw",
                 borderColor: "#1F468B",
-                // boxShadow: "5px 8px 24px 5px rgba(210, 210, 210, 0.6)",
             }}>
                 <Table 
                     tableLayout="fixed"
                     size="small"
                     dataSource={dataSource} 
                     columns={columns} 
-                    bordered='true'
+                    bordered={false}
                     style={{
-                        borderRadius: '8px',
-                        marginTop: '4vh',
-                        //marginLeft: '1vw',
-                        //marginRight: '1vw',
                     }}
-                    
                 />;
             </div>
             <Modal
