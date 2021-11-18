@@ -15,7 +15,7 @@ import redbar from "./assets/red_bar.png";
 
 var myCurrentDate = new Date();
 
-const App = () => (
+const App = ( props ) => (
   <div
     style={{
       overflowX: "hidden",
@@ -134,6 +134,52 @@ const App = () => (
         }}
       />
     </div>
+
+    <div
+        style={{
+          marginLeft: "10vw",
+          marginTop: "5vh",
+          position: "relative",
+        }}
+      >
+        <b style={{ fontSize: "40px" }}> {props.pageName} </b>
+        <br />
+        <b style={{ fontSize: "20px" }}> {props.roomName} </b>
+        <div style={{ fontSize: "20px" }}> {props.intro} </div>
+    </div>
+
+      <img
+        src={props.path}
+        style={{
+          marginLeft: "70vw",
+          marginTop: "-190px",
+          height: "210px",
+        }}
+      />
+      <img
+      src={props.background}
+      style={{
+        marginTop: "-300px",
+        marginBottom: "-25vh",
+        // maxHeight: "60vh",
+        height: "280px",
+        overflowX: "hidden",
+        // overflowY: "hidden",
+      }}
+    />
+
+      <div
+        style={{
+          marginTop: "5vh",
+          backgroundColor: "#eee",
+          height: 0.05,
+          width: "auto",
+          borderColor: "transparent",
+          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
+          overflowX: "hidden",
+          overflowY: "hidden",
+        }}
+      />
   </div>
 );
 
