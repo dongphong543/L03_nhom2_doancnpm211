@@ -126,7 +126,7 @@ const Room = () => {
               textAlign: "left",
             }}
           >
-            <Link to="/forum">
+            <Link to="/sforum">
               <Button
                 style={{
                   borderRadius: "8px",

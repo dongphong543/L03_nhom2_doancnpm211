@@ -6,6 +6,10 @@ import { Link } from "react-router-dom"; // v6
 import "./App.css";
 
 export default function Login() {
+  const [usr, setUsr] = React.useState("");
+  const [pw, setPw] = React.useState("");
+  const [link, setLink] = React.useState("");
+
   return (
     <div>
       <Row className="row">
@@ -52,6 +56,10 @@ export default function Login() {
                 height: "50px",
                 borderRadius: "8px",
               }}
+              onChange={(e) => {
+                setUsr(e.target.value);
+                // console.log(usr);
+              }}
             />
             <br />
             <Input.Password
@@ -59,9 +67,14 @@ export default function Login() {
               placeholder=" Mật khẩu"
               prefix={<QuestionCircleOutlined />}
               style={{ height: "50px", borderRadius: "8px", marginTop: "10px" }}
+              onChange={(e) => {
+                setPw(e.target.value);
+                // console.log(usr);
+              }}
             />
             <br />
-            <Link to="/shome">
+            {/* <Link to="/shome"> */}
+            <Link to={link}>
               <Button
                 style={{
                   borderRadius: "8px",
@@ -73,7 +86,15 @@ export default function Login() {
                 }}
                 size="large"
                 type="primary"
-                // onClick={() => alert("You pressed")}
+                onClick={() => {
+                  setUsr(usr);
+                  setPw(pw);
+
+                  if (usr == "student" && pw == "student") setLink("/shome");
+                  else if (usr == "teacher" && pw == "teacher")
+                    setLink("/home");
+                  else alert("Bạn đã nhập sai tên đăng nhập hoặc mật khẩu!");
+                }}
               >
                 <b style={{ fontSize: "20px" }}>Đăng nhập</b>
               </Button>
@@ -102,7 +123,7 @@ export default function Login() {
               }}
             />
             <span style={{ color: "#1F468B" }}>Chưa có tài khoản?</span>
-            <Link to="signup">
+            <Link to="/signup">
               <Button
                 style={{
                   color: "#1F468B",

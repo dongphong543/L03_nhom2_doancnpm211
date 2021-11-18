@@ -5,13 +5,14 @@ import Login from "./login_screen";
 import Signup from "./signup_screen";
 import Timetable from "./timetable";
 import Join from "./join_class";
-import Class from "./class_content";
-import Room from "./Room";
+import Class from "./class_content"; //teacher
+import Room from "./Room"; //student
 import Info_screen from "./Info_screen";
 import SubjectScreen from "./subject_list_screen";
 import Bangdiem from "./screens/markscreen/stu_screen_table";
 // import Forum from "./forum_screen";
-import NForum from "./NEW forum_screen";
+import NForum from "./forum_screen";
+import SForum from "./forum_screen_s";
 import StuUI from "./gdhs";
 import TeaUI from "./gdgv";
 
@@ -39,6 +40,7 @@ function App() {
           <Route exact path="/class" element={<Class />} />
           <Route exact path="/classroom" element={<Room />} />
           <Route exact path="/forum" element={<NForum />} />
+          <Route exact path="/sforum" element={<SForum />} />
           <Route exact path="/timetable" element={<Timetable />} />
           <Route exact path="/joinclass" element={<Join />} />
           <Route exact path="/ptstable" element={<Bangdiem />} />

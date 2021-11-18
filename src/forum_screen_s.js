@@ -1,9 +1,8 @@
 import React from "react";
-import { Row, Col, Card, Input, Button } from "antd";
+import { Row, Col, Card, Input, Button, Drawer } from "antd";
 import logo from "./assets/S_letter.png";
 import bluebar from "./assets/blue_bar.png";
 import redbar from "./assets/red_bar.png";
-import { UserOutlined, QuestionCircleOutlined } from "@ant-design/icons";
 import "./App.css";
 import { formatCountdown } from "antd/lib/statistic/utils";
 import Nav from "./navbar";
@@ -27,20 +26,6 @@ const Forum = () => {
     },
   ]);
 
-  const deleteFile = (id, anouncementCheck) => {
-    if (anouncementCheck) {
-      setAnnouncements(
-        announcements.filter((anouncement) => anouncement.id !== id)
-      );
-      console.log(announcements);
-    }
-    // else setTests(tests.filter((test) => test.id != id));
-  };
-
-  const addFile = (id, anouncementCheck) => {
-    alert("Hey!");
-  };
-
   return (
     <div>
       {" "}
@@ -59,12 +44,12 @@ const Forum = () => {
       </div>
       <hr
         style={{
-          // marginTop: "vh",
           backgroundColor: "#eee",
           height: 0.05,
           width: "auto",
           borderColor: "transparent",
           boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
+          marginBottom: "20px",
         }}
       />
       {announcements.map((announcement) => (
@@ -79,26 +64,6 @@ const Forum = () => {
               >
                 {announcement.titleName}
               </h3>
-              // <Input
-              //   placeholder={announcement.titleName}
-              //   // defaultValue={announcement.titleName}
-              //   bordered={false}
-              // />
-            }
-            extra={
-              <Button
-                onClick={() => deleteFile(announcement.id, true)}
-                style={{
-                  color: "white",
-                  backgroundColor: "red",
-                  outlineColor: "red",
-                  borderColor: "red",
-                  borderRadius: "4px",
-                }}
-              >
-                {" "}
-                Xóa{" "}
-              </Button>
             }
             style={{
               width: "80vw",
@@ -117,21 +82,7 @@ const Forum = () => {
           </Card>
         </div>
       ))}
-      <Button
-        onClick={() => addFile("10", true)}
-        style={{
-          float: "right",
-          color: "white",
-          backgroundColor: "#23A859",
-          outlineColor: "#23A859",
-          borderColor: "#23A859",
-          borderRadius: "4px",
-          marginRight: "11vw",
-        }}
-      >
-        {" "}
-        Thêm thông báo{" "}
-      </Button>
+      <div style={{ color: "white", marginTop: "100px" }}> {" . "} </div>
     </div>
   );
 };

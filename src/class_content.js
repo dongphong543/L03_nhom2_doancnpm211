@@ -14,6 +14,7 @@ import { useState } from "react";
 
 import board from "./assets/icon_board.png";
 import Nav from "./navbar";
+import { Link } from "react-router-dom";
 
 const Class_content = () => {
   const [lectures, setLectures] = useState([
@@ -133,20 +134,21 @@ const Class_content = () => {
             textAlign: "left",
           }}
         >
-          <Button
-            style={{
-              borderRadius: "8px",
-              color: "#2E75A8",
-            }}
-            size="large"
-            type="link"
-            onClick={() => alert("You pressed on forum")}
-          >
-            <CommentOutlined style={{ fontSize: "25px" }} />
-            <span style={{ fontSize: "17px", marginLeft: "2vw" }}>
-              Forum thảo luận{" "}
-            </span>
-          </Button>
+          <Link to="/forum">
+            <Button
+              style={{
+                borderRadius: "8px",
+                color: "#2E75A8",
+              }}
+              size="large"
+              type="link"
+            >
+              <CommentOutlined style={{ fontSize: "25px" }} />
+              <span style={{ fontSize: "17px", marginLeft: "2vw" }}>
+                Forum thảo luận{" "}
+              </span>
+            </Button>
+          </Link>
         </h3>
 
         {/* ////////////////////////// BÀI GIẢNG ////////////////////////// */}
