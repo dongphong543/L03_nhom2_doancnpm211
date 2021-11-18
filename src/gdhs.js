@@ -1,5 +1,6 @@
 import CardC from "./Card";
-import Gdhsnav from "./gdhsnav";
+import Navbar from "./navbar";
+// import Gdhsnav from "./gdhsnav";
 import { Link } from "react-router-dom"; // v6
 
 import { Row, Col } from "antd";
@@ -8,6 +9,7 @@ import aplus from "./assets/icon_aplus.png";
 import board from "./assets/icon_board.png";
 import plus from "./assets/icon_plus.png";
 import male from "./assets/icon_male.png";
+import student from "./assets/stu_backgr.jpg";
 
 const style = {
   marginTop: "5vh",
@@ -18,8 +20,13 @@ const style = {
 const App = () => {
   return (
     <div className="App">
-      <Gdhsnav />
-      <hr
+      <Navbar 
+        pageName="Steasy!"
+        intro="Từ nay việc học trở nên dễ dàng và ngăn nắp hơn bao giờ hết"
+        background={student}
+        />
+      
+      {/* <hr
         style={{
           backgroundColor: "#eee",
           height: 0.05,
@@ -30,7 +37,7 @@ const App = () => {
           zIndex: "2",
           marginTop: "-1px",
         }}
-      />
+      /> */}
       <Row>
         <Col style={style}>
           <Link to="/subject">

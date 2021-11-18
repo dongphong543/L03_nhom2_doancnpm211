@@ -19,8 +19,7 @@ import ClassManage from "./qllh";
 import MarkManage from "./qld";
 import TestScreen from "./screens/testscreen/student_test_screen";
 function App() {
-  return (
-    // return <Login />;
+  // return <Login />;
     // return <Signup />;
     // return <NForum />;
     // return <Join />;
@@ -30,7 +29,7 @@ function App() {
     // return <Room />; //for student, in future
     // return <StuUI />;
     // return <TeaUI />;
-
+  return (
     <Router>
       <div>
         <Routes>
