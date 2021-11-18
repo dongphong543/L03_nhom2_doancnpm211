@@ -47,33 +47,7 @@ const styleButton2 = {
 
 const App = () => (
     <div>
-        <Navb />
-        <div
-        style={{
-          marginLeft: "10vw",
-          marginTop: "5vh",
-        }}
-      >
-        <b style={{ fontSize: "40px" }}>Quản lý lớp học</b>
-        <br />
-      </div>
-      <img
-        src={board}
-        style={{
-          marginLeft: "75vw",
-          marginTop: "-157px",
-          height: "210px",
-        }}
-      />
-      <hr
-        style={{
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-        }}
-      />
+        <Navb pageName="Quản lý lớp học" path={board}/>
         <Row>
             <Menu 
                 style={{

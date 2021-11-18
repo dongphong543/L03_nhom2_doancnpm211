@@ -1,6 +1,6 @@
 import CardC from "./Card";
 import Navbar from "./navbar";
-// import Gdhsnav from "./gdhsnav";
+
 import { Link } from "react-router-dom"; // v6
 
 import { Row, Col } from "antd";
@@ -24,20 +24,8 @@ const App = () => {
         pageName="Steasy!"
         intro="Từ nay việc học trở nên dễ dàng và ngăn nắp hơn bao giờ hết"
         background={student}
-        />
+      />
       
-      {/* <hr
-        style={{
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          position: "relative",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-          zIndex: "2",
-          marginTop: "-1px",
-        }}
-      /> */}
       <Row>
         <Col style={style}>
           <Link to="/subject">
