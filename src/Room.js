@@ -229,6 +229,33 @@ const Room = () => {
             </a>
           </h3>
         </div>
+                      {/* BÀI KIỂM TRA */}
+                      <Divider />
+        <div style={{ width: "100%", float: "left" }}>
+          <b style={{ fontSize: "25px", color: "#1F468B" }}>Bài kiểm tra</b>{" "}
+          <br />
+
+            <h3
+              style={{
+                // borderRadius: "8px",
+                background: "#F4F4F4",
+                margin: "5px",
+                padding: "2px 15px",
+                cursor: "pointer",
+                width: "80vw",
+                textAlign: "left",
+              }}
+            >
+              <FileFilled style={{ color: "#1F468B", fontSize: "25px" }}  />{" "}
+            <Link to = "/testui"
+              style={{ color: "#2E75A8", fontSize: "17px", marginLeft: "2vw" }}
+              // href=""
+            >
+              Bài kiểm tra số 1
+            </Link>
+            </h3>
+          <br />
+        </div>
       </div>
     </>
   );

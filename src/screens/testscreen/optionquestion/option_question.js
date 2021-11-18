@@ -7,14 +7,17 @@ function OptionQuestion() {
   const [value, setValue] = React.useState(1);
 
   const onChange = (e) => {
-    console.log("radio checked", e.target.value);
     setValue(e.target.value);
   };
   return (
     <div className="option-question-container">
-      <div>
-        <span className="option-question-number">{"Câu 2: "}</span>
-        <span className="option-question">{"Tính thoái hóa của mã di truyền là hiện tượng nhiều bộ ba khác nhau cùng mã hóa cho một loại axit amin. Những mã di truyền nào sau đây không có tính thoái hóa?"}</span>
+      <div className="option-question-holder">
+        <span className="option-question-number">{"Câu 2 (1đ): "}</span>
+        <span className="option-question">
+          {
+            "Tính thoái hóa của mã di truyền là hiện tượng nhiều bộ ba khác nhau cùng mã hóa cho một loại axit amin. Những mã di truyền nào sau đây không có tính thoái hóa?"
+          }
+        </span>
       </div>
       <div className="option-answer-container">
         <Radio.Group

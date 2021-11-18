@@ -11,9 +11,6 @@ function TeacherScreen() {
       overflowX: 'hidden'
     }}>
       <ScreenHeader name="Tạo bài kiểm tra"></ScreenHeader>
-      <CrTextQuestion></CrTextQuestion>
-      <CrOptionQuestion></CrOptionQuestion>
-      <SaveButton></SaveButton>
     </div>
   );
 }
