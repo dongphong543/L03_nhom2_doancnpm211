@@ -18,6 +18,8 @@ import TeaUI from "./gdgv";
 import ClassManage from "./qllh";
 import MarkManage from "./qld";
 import TestScreen from "./screens/testscreen/student_test_screen";
+import CreateClass from "./create_class";
+
 function App() {
   // return <Login />;
     // return <Signup />;
@@ -49,6 +51,7 @@ function App() {
           <Route exact path="/testui" element={<TestScreen />} />
           <Route exact path="/classmanage" element={<ClassManage />} />
           <Route exact path="/markmanage" element={<MarkManage />} />
+          <Route exact path="/createclass" element={<CreateClass />} />
         </Routes>
       </div>
     </Router>

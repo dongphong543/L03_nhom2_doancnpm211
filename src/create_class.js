@@ -7,7 +7,7 @@ import Nav from "./navbar";
 const join_class = () => {
   return (
     <div>
-      <Nav pageName="Tham gia lớp học"
+      <Nav pageName="Tạo lớp học"
            path={join}/>
       {/* <div
         style={{

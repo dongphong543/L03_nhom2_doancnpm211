@@ -32,7 +32,7 @@ const App = () => {
           </Link>
         </Col>
         <Col style={style}>
-          <Link to="/classManage">
+          <Link to="/createclass">
             <CardC link={plus} text="Tạo lớp học" />
           </Link>
         </Col>
