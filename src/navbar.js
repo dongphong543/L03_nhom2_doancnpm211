@@ -19,6 +19,7 @@ const App = ( props ) => (
   <div
     style={{
       overflowX: "hidden",
+      overflowY: "hidden",
       position: "relative",
     }}
   >
@@ -162,7 +163,7 @@ const App = ( props ) => (
         marginTop: "-300px",
         marginBottom: "-25vh",
         // maxHeight: "60vh",
-        height: "280px",
+        height: "355px",
         overflowX: "hidden",
         // overflowY: "hidden",
       }}

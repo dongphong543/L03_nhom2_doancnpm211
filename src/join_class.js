@@ -7,33 +7,7 @@ import Nav from "./navbar";
 const join_class = () => {
   return (
     <div>
-      <Nav />
-      <div
-        style={{
-          marginLeft: "10vw",
-          marginTop: "7vh",
-        }}
-      >
-        <b style={{ fontSize: "40px" }}>Tham gia lớp học</b>
-      </div>
-      <img
-        src={join}
-        style={{
-          marginLeft: "70vw",
-          marginTop: "-200px",
-          height: "210px",
-        }}
-      />
-      <hr
-        style={{
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-        }}
-      />
-
+      <Nav pageName="Tham gia lớp học" path={join}/>
       <div
         style={{
           marginTop: "10vh",

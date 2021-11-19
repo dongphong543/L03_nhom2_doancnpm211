@@ -74,7 +74,7 @@ const App = () => (
                 >
                     <Menu.Item style={style}>0123456789 - Thể dục 12 - Đinh Văn B</Menu.Item>
                     <Menu.Item style={style}>9876543210 - Lịch sử 10 - Trần Văn C</Menu.Item>
-                    <Menu.Item style={styleAdd}><b>Thêm lớp học</b></Menu.Item>
+                    <Link to="/createclass"><Menu.Item style={styleAdd}><b>Thêm lớp học</b></Menu.Item></Link>
                 </SubMenu>
             </Menu>
         </Row>

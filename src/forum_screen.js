@@ -73,29 +73,7 @@ const Forum = () => {
   return (
     <div>
       {" "}
-      <Nav />
-      <div
-        style={{
-          marginTop: "25px",
-          marginLeft: "150px",
-          marginBottom: "25px",
-          fontSize: "48px",
-          fontWeight: "bold",
-          color: "#222",
-        }}
-      >
-        Diễn đàn
-      </div>
-      <hr
-        style={{
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-          marginBottom: "20px",
-        }}
-      />
+      <Nav pageName="Diễn đàn"/>
       {announcements.map((announcement) => (
         <div>
           <Card
