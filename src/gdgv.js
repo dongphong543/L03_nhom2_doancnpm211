@@ -1,5 +1,5 @@
 import CardC from "./Card";
-import Gdgvnav from "./gdgvnav";
+import Navbar from "./navbar";
 
 import { Link } from "react-router-dom"; // v6
 
@@ -9,6 +9,7 @@ import board from "./assets/icon_board.png";
 import female from "./assets/icon_female.png";
 import plus from "./assets/icon_plus.png";
 import students from "./assets/icon_students.png";
+import teacher from "./assets/tea_backgr.png";
 
 const style = {
   marginTop: "5vh",
@@ -19,18 +20,10 @@ const style = {
 const App = () => {
   return (
     <div className="App">
-      <Gdgvnav />
-      <hr
-        style={{
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          position: "relative",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-          zIndex: "2",
-          marginTop: "-1px",
-        }}
+      <Navbar 
+        pageName="Steasy!"
+        intro="Từ nay việc dạy học trở nên gần gũi và hiệu quả hơn bao giờ hết"
+        background={teacher}
       />
       <Row>
         <Col style={style}>
@@ -39,16 +32,24 @@ const App = () => {
           </Link>
         </Col>
         <Col style={style}>
-          <CardC link={plus} text="Tạo lớp học" />
+          <Link to="/createclass">
+            <CardC link={plus} text="Tạo lớp học" />
+          </Link>
         </Col>
         <Col style={style}>
-          <CardC link={students} text="Quản lý lớp học" />
+          <Link to="/classManage">
+            <CardC link={students} text="Quản lý lớp học" />
+          </Link>
         </Col>
         <Col style={style}>
-          <CardC link={agenda} text="Lịch dạy học" />
+          <Link to="/timetable">
+            <CardC link={agenda} text="Lịch dạy học" />
+          </Link>
         </Col>
         <Col style={style}>
-          <CardC link={female} text="Cá nhân" />
+          <Link to="/info">
+            <CardC link={female} text="Cá nhân" />
+          </Link>
         </Col>
       </Row>
     </div>

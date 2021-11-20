@@ -1,14 +1,16 @@
 import React from "react";
 import { Row, Button, Menu, List } from "antd";
 import { CaretDownOutlined } from "@ant-design/icons";
-import Navb from './navbarqllh'
+import { Link } from "react-router-dom";
+import Navb from './navbar'
+import board from "./assets/icon_board.png";
 const { SubMenu } = Menu;
 
 const style = {
     borderRadius: '8px',
     textAlign: 'center',
-    color: 'white',
-    backgroundColor: "RoyalBlue",
+    color: 'Black',
+    backgroundColor: "#f4f4f4",
     position: "relative",
     zIndex: '2'
 };
@@ -16,8 +18,9 @@ const style = {
 const styleAdd = {
     borderRadius: '8px',
     textAlign: 'center',
-    color: 'black',
-    backgroundColor: "LimeGreen",
+    color: 'white',
+    backgroundColor: "#23A859",
+    zIndex: '2'
 };
 
 const styleIcon = {
@@ -44,80 +47,71 @@ const styleButton2 = {
 
 const App = () => (
     <div>
-        <Navb />
+        <Navb pageName="Quản lý lớp học" path={board}/>
         <Row>
             <Menu 
                 style={{
+                    //zIndex: '2',
                     borderRadius: '8px',
-                    backgroundColor: "SteelBlue",
+                    backgroundColor: "#1F468B",
                     borderColor: "#1F468B",
-                    width: "950px",
-                    height: "50px",
+                    height: "45px",
                     marginTop: "40px",
-                    marginLeft: '200px',
+                    marginLeft: '10vw',
+                    width: "80vw",
                     color: 'white',
                     textAlign: 'center',
-                    theme: 'dark',
-                    fontWeight: 'bold',
-                    //marginRight: 'auto',
+                    fontSize: "15px",
+                    // fontWeight: 'bold',
+                    // marginRight: 'auto',
                 }}
                 mode='inline'
                 expandIcon={<CaretDownOutlined style={styleIcon}/>}
-                onClick={() => alert("You clicked")}
+                onClick={() => alert("You pressed")}
             >
                 <SubMenu 
-                    title="6996699669 - GDCD 12 - Huấn Hoa Hòe"
-                    style = {{borderRadius: '8px',}}
+                    title="829717313 - Toán 11 - Nguyễn Thị A"
                 >
-                    <Menu.Item style={style}>0123456789 - Thể dục 12 - Nguyễn Hữu Đa</Menu.Item>
-                    <Menu.Item style={style}>9876543210 - Lịch sử 10 - Nguyễn Văn Biển</Menu.Item>
-                    <Menu.Item style={styleAdd}><b>Thêm lớp học</b></Menu.Item>
+                    <Menu.Item style={style}>0123456789 - Thể dục 12 - Đinh Văn B</Menu.Item>
+                    <Menu.Item style={style}>9876543210 - Lịch sử 10 - Trần Văn C</Menu.Item>
+                    <Link to="/createclass"><Menu.Item style={styleAdd}><b>Thêm lớp học</b></Menu.Item></Link>
                 </SubMenu>
             </Menu>
         </Row>
         <Row>
+        <Link to="/markmanage">
             <Button
-                type='primary'
-                size='middle'
                 style={{
-                    textAlign: 'center',
-                    color: 'white',
-                    backgroundColor: "SteelBlue",
-                    marginTop: "30px",
-                    marginLeft: '200px',
-                    width: "270px",
-                    height: "50px",
-                    position: "relative",
-                    zIndex: '1',
+                    borderRadius: "8px",
+                    backgroundColor: "#1F468B",
+                    borderColor: "#1F468B",
+                    height: "45px",
+                    width: "200px",
+                    marginTop: "20px",
+                    marginLeft: "10vw",
                 }}
-                onClick={() => alert("You clicked")}
+                size="large"
+                type="primary"
             >
                 Bảng điểm
             </Button>
+        </Link>
         </Row>
         <Row>
             <div style={{
-                borderRadius: '8px',
-                display: 'block',
-                width: 700,
-                padding: 15,
-                backgroundColor: 'SteelBlue',
-                marginTop: '30px',
-                marginLeft: '200px',
-                width: "950px",
+                zIndex: '1',
+                width: "80vw",
+                marginTop: "30px",
+                marginLeft: "10vw",
                 height: "500px",
-                borderColor: "#1F468B",
-                boxShadow: "5px 8px 24px 5px rgba(210, 210, 210, 0.6)",
             }}>
-                <h3 style={{color: 'white'}}>Danh sách học sinh</h3>
+                <b style={{ fontSize: "25px", color: "#1F468B" }}>Danh sách học sinh</b> <br />
                 <List
                     style={{
-                        borderRadius: '8px',
-                        color: 'green',
-                        backgroundColor: 'gold'
+                        fontSize: "17px"
                     }}
                     split='true'
-                    bordered
+                    bordered={true}
                     dataSource={[
                         'Nguyễn Văn A - 15337890',
                         'Nguyễn Văn B - 15337891',
@@ -128,16 +122,16 @@ const App = () => (
                         'Nguyễn Văn G - 15337896',
                     ]}
                     renderItem={item => (   
-                    <List.Item
-                        extra={
-                        <List>
-                            <Button style={styleButton1} onClick={() => alert("You kicked")}>kick</Button>
-                            <Button style={styleButton2} onClick={() => alert("You baned")}>ban</Button>
-                        </List>
-                        }
-                    >
-                        {item}
-                    </List.Item>
+                        <List.Item
+                            extra={
+                            <List>
+                                <Button style={styleButton1} onClick={() => alert("You kicked")}>Kick</Button>
+                                <Button style={styleButton2} onClick={() => alert("You baned")}>Ban</Button>
+                            </List>
+                            }
+                        >
+                            {item}
+                        </List.Item>
                     )}
                 />
             </div>

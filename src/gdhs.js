@@ -1,5 +1,6 @@
 import CardC from "./Card";
-import Gdhsnav from "./gdhsnav";
+import Navbar from "./navbar";
+
 import { Link } from "react-router-dom"; // v6
 
 import { Row, Col } from "antd";
@@ -8,6 +9,7 @@ import aplus from "./assets/icon_aplus.png";
 import board from "./assets/icon_board.png";
 import plus from "./assets/icon_plus.png";
 import male from "./assets/icon_male.png";
+import student from "./assets/stu_backgr.jpg";
 
 const style = {
   marginTop: "5vh",
@@ -18,19 +20,12 @@ const style = {
 const App = () => {
   return (
     <div className="App">
-      <Gdhsnav />
-      <hr
-        style={{
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          position: "relative",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-          zIndex: "2",
-          marginTop: "-1px",
-        }}
+      <Navbar 
+        pageName="Steasy!"
+        intro="Từ nay việc học trở nên dễ dàng và ngăn nắp hơn bao giờ hết"
+        background={student}
       />
+      
       <Row>
         <Col style={style}>
           <Link to="/subject">

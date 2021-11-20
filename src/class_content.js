@@ -14,6 +14,8 @@ import { useState } from "react";
 
 import board from "./assets/icon_board.png";
 import Nav from "./navbar";
+import { Link } from "react-router-dom";
+import AddLecture from "./AddLecture";
 
 const Class_content = () => {
   const [lectures, setLectures] = useState([
@@ -21,11 +23,13 @@ const Class_content = () => {
       id: 1,
       icon: <FilePdfFilled style={{ color: "#F01836", fontSize: "25px" }} />,
       name: "Tài liệu bài giảng 1",
+      link: "https://www.youtube.com/watch?v=bU86q1ycG1o"
     },
     {
       id: 2,
       icon: <FilePdfFilled style={{ color: "#F01836", fontSize: "25px" }} />,
       name: "Tài liệu bài giảng 2",
+      link: "https://www.youtube.com/watch?v=bU86q1ycG1o"
     },
     {
       id: 3,
@@ -33,11 +37,13 @@ const Class_content = () => {
         <VideoCameraFilled style={{ color: "#1F468B", fontSize: "25px" }} />
       ),
       name: "Video bài giảng",
+      link: "https://www.youtube.com/watch?v=bU86q1ycG1o"
     },
     {
       id: 4,
       icon: <FileImageFilled style={{ color: "#1F468B", fontSize: "25px" }} />,
       name: "Tài liệu hình ảnh",
+      link: "https://www.youtube.com/watch?v=bU86q1ycG1o"
     },
   ]);
 
@@ -64,51 +70,29 @@ const Class_content = () => {
     },
   ]);
 
-  // const deleteLecture = (id, ) => {
-  //     setLectures(lectures.filter((lecture) => lecture.id !== id))
-  // }
+  // Add lecture
+  const addLec = (lecture) => {
+    const id = Math.floor(Math.random() * 10000) + 1
+    const icon = <FilePdfFilled style={{ color: "#F01836", fontSize: "25px" }} />
+    const newLecture = { id, icon, ...lecture }
+    setLectures([...lectures, newLecture])
+  }
 
+  // Delete lecture or test
   const deleteFile = (id, lectureCheck) => {
     if (lectureCheck)
       setLectures(lectures.filter((lecture) => lecture.id !== id));
     else setTests(tests.filter((test) => test.id != id));
   };
 
+  // Toggle add lecture
+  const [showAddLec, setShowAddLec] = useState(false)
+
   return (
     <div>
-      <Nav />
-      <div
-        style={{
-          marginLeft: "10vw",
-          marginTop: "5vh",
-        }}
-      >
-        <b style={{ fontSize: "40px" }}> Nội dung lớp học </b>
-        <br />
-        <b style={{ fontSize: "20px" }}>829717313 - Toán 11 - Nguyễn Thị A</b>
-      </div>
-      <img
-        src={board}
-        style={{
-          marginLeft: "70vw",
-          marginTop: "-200px",
-          height: "210px",
-        }}
-      />
-      <hr
-        style={{
-          // marginTop: "vh",
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-        }}
-      />
-
-      {/* <Upload {...props}>
-                <Button><PlusSquareOutlined /></Button>
-            </Upload> */}
+      <Nav pageName="Nội dung lớp học"
+           roomName="829717313 - Toán 11 - Nguyễn Thị A"
+           path={board}/>
 
       <div
         style={{
@@ -133,20 +117,21 @@ const Class_content = () => {
             textAlign: "left",
           }}
         >
-          <Button
-            style={{
-              borderRadius: "8px",
-              color: "#2E75A8",
-            }}
-            size="large"
-            type="link"
-            onClick={() => alert("You pressed on forum")}
-          >
-            <CommentOutlined style={{ fontSize: "25px" }} />
-            <span style={{ fontSize: "17px", marginLeft: "2vw" }}>
-              Forum thảo luận{" "}
-            </span>
-          </Button>
+          <Link to="/forum">
+            <Button
+              style={{
+                borderRadius: "8px",
+                color: "#2E75A8",
+              }}
+              size="large"
+              type="link"
+            >
+              <CommentOutlined style={{ fontSize: "25px" }} />
+              <span style={{ fontSize: "17px", marginLeft: "2vw" }}>
+                Forum thảo luận{" "}
+              </span>
+            </Button>
+          </Link>
         </h3>
 
         {/* ////////////////////////// BÀI GIẢNG ////////////////////////// */}
@@ -169,19 +154,19 @@ const Class_content = () => {
               <Button
                 size="large"
                 type="link"
-                onClick={() => alert("You pressed on a document")}
                 key={lecture.id}
               >
                 {lecture.icon}
-                <span
+                <a
                   style={{
                     color: "#2E75A8",
                     fontSize: "17px",
                     marginLeft: "2vw",
                   }}
+                  href={lecture.link}
                 >
-                  {lecture.name}{" "}
-                </span>
+                    {lecture.name}{" "}
+                </a>
               </Button>
               <Button
                 size="large"
@@ -199,10 +184,11 @@ const Class_content = () => {
               </Button>
             </h3>
           ))}
+          
           <Button
             size="large"
             type="link"
-            onClick={() => alert("You pressed add lecture")}
+            onClick={() => setShowAddLec(!showAddLec)} 
             style={{
               position: "absolute",
               right: "0px",
@@ -212,6 +198,7 @@ const Class_content = () => {
             <PlusSquareFilled style={{ color: "#23A859", fontSize: "20px" }} />
           </Button>{" "}
           <br />
+          {showAddLec && <AddLecture onAdd={addLec}/>}
         </div>
 
         {/* ////////////////////////// BÀI KIỂM TRA ////////////////////////// */}
