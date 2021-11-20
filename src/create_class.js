@@ -3,37 +3,11 @@ import { Button, Input } from "antd";
 import "./App.css";
 import join from "./assets/icon_plus.png";
 import Nav from "./navbar";
-
+import { Link } from "react-router-dom";
 const join_class = () => {
   return (
     <div>
-      <Nav pageName="Tham gia lớp học"
-           path={join}/>
-      {/* <div
-        style={{
-          marginLeft: "10vw",
-          marginTop: "7vh",
-        }}
-      >
-        <b style={{ fontSize: "40px" }}>Tạo lớp học</b>
-      </div>
-      <img
-        src={join}
-        style={{
-          marginLeft: "70vw",
-          marginTop: "-200px",
-          height: "210px",
-        }}
-      />
-      <hr
-        style={{
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-        }}
-      /> */}
+      <Nav pageName="Tạo lớp học"  path={join} checkStu='false'/>
 
       <div
         style={{
@@ -82,6 +56,7 @@ const join_class = () => {
           }}
         />
         <br />
+        <Link to="/class">
         <Button
           style={{
             borderRadius: "8px",
@@ -93,10 +68,11 @@ const join_class = () => {
           }}
           size="large"
           type="primary"
-          onClick={() => alert("You pressed")}
+          onClick={() => alert("Tạo lớp thành công")}
         >
           <b style={{ fontSize: "16px" }}>Mở lớp</b>
         </Button>
+        </Link>
       </div>
     </div>
   );

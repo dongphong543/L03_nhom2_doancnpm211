@@ -251,10 +251,11 @@ const Class_content = () => {
               </Button>
             </h3>
           ))}
+          <Link to="/addtest">
           <Button
             size="large"
             type="link"
-            onClick={() => alert("You pressed add test")}
+            // onClick={() => alert("You pressed add test")}
             style={{
               position: "absolute",
               right: "0px",
@@ -263,6 +264,7 @@ const Class_content = () => {
           >
             <PlusSquareFilled style={{ color: "#23A859", fontSize: "20px" }} />
           </Button>{" "}
+          </Link>
           <br />
         </div>
       </div>

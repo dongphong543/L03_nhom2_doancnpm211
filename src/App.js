@@ -18,17 +18,21 @@ import TeaUI from "./gdgv";
 import ClassManage from "./qllh";
 import MarkManage from "./qld";
 import TestScreen from "./screens/testscreen/student_test_screen";
+import CreateClass from "./create_class"
+import AddTest from "./screens/teacher_test_screen/teacher_screen"
 function App() {
   // return <Login />;
     // return <Signup />;
     // return <NForum />;
     // return <Join />;
     // return <Timetable />;
+    // return <CreateClass />;
     // return <Class />;
     // return <Info_screen />;
     // return <Room />; //for student, in future
     // return <StuUI />;
     // return <TeaUI />;
+    
   return (
     <Router>
       <div>
@@ -49,6 +53,8 @@ function App() {
           <Route exact path="/testui" element={<TestScreen />} />
           <Route exact path="/classmanage" element={<ClassManage />} />
           <Route exact path="/markmanage" element={<MarkManage />} />
+          <Route exact path="/createclass" element={<CreateClass />} />
+          <Route exact path="/addtest" element={<AddTest />} />
         </Routes>
       </div>
     </Router>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Dropdown, message, Badge } from "antd";
+import { Menu, Dropdown, message, Button, Card} from "antd";
 import {
   FileDoneOutlined,
   UserOutlined,
@@ -20,17 +20,36 @@ const App = ( props ) => (
     style={{
       overflowX: "hidden",
       position: "relative",
+      overflowY: "hidden",
     }}
   >
-    <img
-      src={logo}
-      style={{
-        marginTop: "20px",
-        marginLeft: "35px",
-        height: "38px",
-        position: "absolute",
-      }}
-    />
+    { props.checkStu &&
+      (<Link to="/shome">
+        <Card>
+      <img
+        src={logo}
+        style={{
+          marginTop: "20px",
+          marginLeft: "35px",
+          height: "38px",
+          position: "absolute",
+        }}/>
+        </Card>
+      </Link>) 
+        || !props.checkStu &&
+      (<Link to="/home">
+        <Card>
+      <img
+        src={logo}
+        style={{
+          marginTop: "20px",
+          marginLeft: "35px",
+          height: "38px",
+          position: "absolute",
+        }}/>
+        </Card>
+      </Link> )
+    }
     <div
       style={{
         marginTop: "20px",
@@ -162,9 +181,9 @@ const App = ( props ) => (
         marginTop: "-300px",
         marginBottom: "-25vh",
         // maxHeight: "60vh",
-        height: "280px",
+        height: "300px",
         overflowX: "hidden",
-        // overflowY: "hidden",
+        overflowY: "hidden",
       }}
     />
 

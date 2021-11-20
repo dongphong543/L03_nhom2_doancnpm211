@@ -3,36 +3,12 @@ import { Button, Input } from "antd";
 import "./App.css";
 import join from "./assets/icon_plus.png";
 import Nav from "./navbar";
+import { Link } from "react-router-dom";
 
 const join_class = () => {
   return (
     <div>
-      <Nav />
-      <div
-        style={{
-          marginLeft: "10vw",
-          marginTop: "7vh",
-        }}
-      >
-        <b style={{ fontSize: "40px" }}>Tham gia lớp học</b>
-      </div>
-      <img
-        src={join}
-        style={{
-          marginLeft: "70vw",
-          marginTop: "-200px",
-          height: "210px",
-        }}
-      />
-      <hr
-        style={{
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-        }}
-      />
+      <Nav pageName="Tham gia lớp học" path={join}/>
 
       <div
         style={{
@@ -74,6 +50,7 @@ const join_class = () => {
           }}
         />
         <br />
+        <Link to="/classroom">
         <Button
           style={{
             borderRadius: "8px",
@@ -84,10 +61,11 @@ const join_class = () => {
           }}
           size="large"
           type="primary"
-          onClick={() => alert("You pressed")}
+          onClick={() => alert("Tham gia lớp thành công")}
         >
           <b style={{ fontSize: "16px" }}>Tham gia</b>
         </Button>
+        </Link>
       </div>
     </div>
   );
