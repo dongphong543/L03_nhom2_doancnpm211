@@ -15,33 +15,27 @@ import NForum from "./forum_screen";
 import SForum from "./forum_screen_s";
 import StuUI from "./gdhs";
 import TeaUI from "./gdgv";
-<<<<<<< HEAD
-import TestScreen from "./screens/testscreen/sutdent_test_screen";
-import TeacherScreen from "./screens/teacher_test_screen/teacher_screen";
-=======
 import ClassManage from "./qllh";
 import MarkManage from "./qld";
 import TestScreen from "./screens/testscreen/student_test_screen";
 import CreateClass from "./create_class";
 
->>>>>>> 57a4800fe0f039b3b689d13b5e855861742bacad
 function App() {
   // return <Login />;
-    // return <Signup />;
-    // return <NForum />;
-    // return <Join />;
-    // return <Timetable />;
-    // return <Class />;
-    // return <Info_screen />;
-    // return <Room />; //for student, in future
-    // return <StuUI />;
-    // return <TeaUI />;
+  // return <Signup />;
+  // return <NForum />;
+  // return <Join />;
+  // return <Timetable />;
+  // return <Class />;
+  // return <Info_screen />;
+  // return <Room />; //for student, in future
+  // return <StuUI />;
+  // return <TeaUI />;
   return (
     <Router>
       <div>
         <Routes>
-          <Route exact path="/" element={<TeacherScreen />} />
-          {/* <Route exact path="/" element={<Login />} />
+          <Route exact path="/" element={<Login />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/shome" element={<StuUI />} />
           <Route exact path="/home" element={<TeaUI />} />
@@ -54,14 +48,10 @@ function App() {
           <Route exact path="/ptstable" element={<Bangdiem />} />
           <Route exact path="/info" element={<Info_screen />} />
           <Route exact path="/subject" element={<SubjectScreen />} />
-<<<<<<< HEAD
-          <Route exact path="/testui" element={<TestScreen />} /> */}
-=======
           <Route exact path="/testui" element={<TestScreen />} />
           <Route exact path="/classmanage" element={<ClassManage />} />
           <Route exact path="/markmanage" element={<MarkManage />} />
           <Route exact path="/createclass" element={<CreateClass />} />
->>>>>>> 57a4800fe0f039b3b689d13b5e855861742bacad
         </Routes>
       </div>
     </Router>
