@@ -85,33 +85,8 @@ const Period = ({period}) => {
 
 const Timetable = () => (
   <div style={{ marginBottom: "20vh"}}>
-    <Nav />
-    <div style={{ 
-        marginLeft: "10vw",
-        marginTop: "7vh",
-      }}>  
-      <b style={{ fontSize: "40px" }}>
-        Thời khóa biểu
-      </b>  
-    </div>
-    <img
-      src={agenda}
-      style={{
-        marginLeft: "70vw",
-        marginTop: "-200px",
-        height: "210px",
-      }}
-    />
-    <hr
-      style={{
-        // marginTop: "-4vh",
-        backgroundColor: "#eee",
-        height: 0.05,
-        width: "auto",
-        borderColor: "transparent",
-        boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-      }}
-    />
+    <Nav pageName="Thời khóa biểu"
+        path={agenda}/>
 
   {/* ///////////////////////////////////////////////////////////////// */}
   <Row >

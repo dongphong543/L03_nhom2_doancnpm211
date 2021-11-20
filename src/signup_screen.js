@@ -5,6 +5,7 @@ import moment from "moment";
 //import { UserOutlined, QuestionCircleOutlined } from "@ant-design/icons";
 import "./App.css";
 import styles from "./TestPage.less";
+import { Link } from "react-router-dom"; // v6
 
 const { Option } = Select;
 
@@ -225,7 +226,6 @@ const Signup = () => {
                   borderBottomLeftRadius: "8px",
                   paddingLeft: "12.5px",
                   fontSize: "16px",
-                  //backgroundColor: "red",
                 }}
                 value="hs"
               >
@@ -250,22 +250,24 @@ const Signup = () => {
         </Row>
 
         <Row>
-          <Button
-            style={{
-              borderRadius: "8px",
-              //backgroundColor: "#1F468B",
-              //borderColor: "#1F468B",
-              width: "150px",
-              height: "45px",
-              marginTop: "25px",
-              marginLeft: "100px",
-            }}
-            size="large"
-            type="primary"
-            onClick={() => alert("You pressed")}
-          >
-            <b style={{ fontSize: "18px" }}>Đăng ký</b>
-          </Button>
+          <Link to="/">
+            <Button
+              style={{
+                borderRadius: "8px",
+                //backgroundColor: "#1F468B",
+                //borderColor: "#1F468B",
+                width: "150px",
+                height: "45px",
+                marginTop: "25px",
+                marginLeft: "100px",
+              }}
+              size="large"
+              type="primary"
+              onClick={() => alert("Đăng ký thành công!")}
+            >
+              <b style={{ fontSize: "18px" }}>Đăng ký</b>
+            </Button>
+          </Link>
         </Row>
       </Card>
     </div>

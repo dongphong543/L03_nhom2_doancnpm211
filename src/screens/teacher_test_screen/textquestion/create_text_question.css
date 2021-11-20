@@ -1,0 +1,12 @@
+.create-question {
+  width: inherit;
+  background-color: #dad6e0de;
+  margin: 10px auto 5px auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.question-container {
+  flex-grow: 10;
+}
