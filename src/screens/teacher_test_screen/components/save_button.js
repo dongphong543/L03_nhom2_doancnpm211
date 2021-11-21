@@ -12,13 +12,14 @@ function SaveButton() {
       }}
     >
       <Button
-        type="primary"
         size="large"
         style={{
           backgroundColor: "#1f468b",
-          border: '#1f468b',
-          borderRadius: '8px'
+          border: "#1f468b",
+          borderRadius: "8px",
+          color: "white",
         }}
+        onClick={() => alert("Tạo bài kiểm tra thành công")}
       >
         Lưu
       </Button>

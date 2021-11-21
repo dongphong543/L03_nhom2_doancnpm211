@@ -1,63 +1,36 @@
 import React from "react";
 import "./tool_container.css";
-import { Button, Tooltip, Select, Input } from "antd";
+import { Button, Tooltip } from "antd";
 import "antd/dist/antd.css";
-import {
-  DeleteOutlined,
-  CopyOutlined,
-  EditOutlined,
-  SaveOutlined,
-} from "@ant-design/icons";
+import { DeleteOutlined } from "@ant-design/icons";
 
-function ToolContainer() {
-  const { Option } = Select;
-  const { TextArea } = Input;
+function ToolContainer(props) {
+  const changeTypeHandler = (event) => {
+    props.onChangeType(props.toolID, event.target.value);
+  };
+
   return (
-    <div className="tool-container">
-      <Select
-        defaultValue="Tự luận"
-        style={{
-          width: "140px",
-          backgroundColor: "rgba(0, 0, 0, 0)",
-          boxShadow: "none",
-        }}
-        bordered={false}
-        className="tool select"
+    <div
+      className="tool-container"
+      style={{ backgroundColor: "#dad6e0de", borderRadius: "5px" }}
+    >
+      <select
+        name="questionType"
+        value={props.selectedValue}
+        onChange={changeTypeHandler}
+        style={{ backgroundColor: "rgba(0,0,0,0)", border: "none" }}
       >
-        <Option value="TL">Tự luận</Option>
-        <Option value="TN">Trắc nghiệm</Option>
-        <Option value="MT">Nhiều lựa chọn</Option>
-      </Select>
-      <Tooltip title="Chỉnh sửa">
-        <Button
-          type="ghost"
-          shape="circle"
-          icon={<EditOutlined />}
-          className="tool"
-        />
-      </Tooltip>
-      <Tooltip title="Sao chép">
-        <Button
-          type="ghost"
-          shape="circle"
-          icon={<CopyOutlined />}
-          className="tool"
-        />
-      </Tooltip>
-      <Tooltip title="Lưu">
-        <Button
-          type="ghost"
-          shape="circle"
-          icon={<SaveOutlined />}
-          className="tool"
-        />
-      </Tooltip>
-      <Tooltip title="Xóa">
+        <option value="TL">Tự luận</option>
+        <option value="TN">Trắc nghiệm</option>
+        <option value="MT">Nhiều đáp án</option>
+      </select>
+      <Tooltip title="Xóa câu hỏi">
         <Button
           type="ghost"
           shape="circle"
           icon={<DeleteOutlined />}
-          className="tool"
+          onClick={props.onClickDelete}
+          style={{ border: "none", margin: "0 10px", color: "red" }}
         />
       </Tooltip>
     </div>

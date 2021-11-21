@@ -1,13 +1,13 @@
 .tool-container {
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    /* background-color: aqua; */
-    bottom: 0;
-  }
-  .tool {
-    border: none;
-    margin: 10px;
-    box-shadow: none;
-  }
-  
+  height: inherit;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  /* margin: auto 0px; */
+  /* background-color: aqua; */
+}
+.tool {
+  border: none;
+  margin: 0 10px;
+  box-shadow: none;
+}
