@@ -47,7 +47,9 @@ const styleButton2 = {
 
 const App = () => (
     <div>
-        <Navb pageName="Quản lý lớp học" path={board}/>
+        <Navb pageName="Quản lý lớp học" 
+            path={board}
+            checkStu={false}/>
         <Row>
             <Menu 
                 style={{

@@ -3,7 +3,9 @@ import ScreenHeader from "../components/screen_header";
 import QuestionItem from "./QuestionItem";
 import NewQuestion from "./components/new_question";
 import SaveButton from "./components/save_button";
+import plus from "../../assets/icon_aplus.png"
 import ToolContainer from "./components/tool_container";
+import { Link } from "react-router-dom";
 
 function TeacherScreen() {
   const [questionsList, setQuestionsList] = useState([]);
@@ -27,23 +29,16 @@ function TeacherScreen() {
     setQuestionsList([...questionsList]);
   };
 
-  return (
+  return (        
     <div
       style={{
         overflowX: "hidden",
-        margin: "0 auto",
+        margin: "0auto",
       }}
     >
-      <ScreenHeader name="Tạo bài kiểm tra"></ScreenHeader>
-      <hr
-        style={{
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-        }}
-      />
+      <ScreenHeader name="Tạo bài kiểm tra"
+                    path={plus}
+                    checkStu={false}/>
       <div
         className="container"
         style={{
@@ -52,7 +47,7 @@ function TeacherScreen() {
           margin: "0 auto",
         }}
       >
-        <ul style={{ padding: "0px" }}>
+        <ul style={{ marginTop: "10vh", padding: "0px" }}>
           {questionsList.map((e) => {
             return (  
               <div key={e.id} style={{ marginBottom: "10px" }}>
@@ -72,7 +67,7 @@ function TeacherScreen() {
           })}
         </ul>
         <NewQuestion onAddQuestion={addQuestionHandler}></NewQuestion>
-        <SaveButton></SaveButton>
+        <Link to="/class"> <SaveButton /> </Link>
       </div>
     </div>
   );

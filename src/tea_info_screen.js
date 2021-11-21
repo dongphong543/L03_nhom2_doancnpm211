@@ -91,7 +91,9 @@ const Info_screen = () => {
                     <b>Cá nhân</b>
                 </div>
             </div> */}
-      <Nav pageName = "Thông tin cá nhân" path = {icon_male}/>
+      <Nav pageName = "Thông tin cá nhân" 
+          path = {icon_male}
+          checkStu={false}/>
       {/* <div
         style={{
           marginLeft: "10vw",

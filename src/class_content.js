@@ -92,7 +92,8 @@ const Class_content = () => {
     <div>
       <Nav pageName="Nội dung lớp học"
            roomName="829717313 - Toán 11 - Nguyễn Thị A"
-           path={board}/>
+           path={board}
+           checkStu={false}/>
 
       <div
         style={{
@@ -171,7 +172,10 @@ const Class_content = () => {
               <Button
                 size="large"
                 type="link"
-                onClick={() => deleteFile(lecture.id, true)}
+                onClick={() => {
+                  if (window.confirm("Bạn có chắc muốn xóa bài giảng này ?")) 
+                  deleteFile(lecture.id, true)
+                }}
                 style={{
                   position: "absolute",
                   right: "0px",
@@ -238,7 +242,9 @@ const Class_content = () => {
               <Button
                 size="large"
                 type="link"
-                onClick={() => deleteFile(test.id, false)}
+                onClick={() => {
+                  if (window.confirm("Bạn có chắc muốn xóa bài kiểm tra này ?")) 
+                  deleteFile(test.id, false)}}
                 style={{
                   position: "absolute",
                   right: "0px",
@@ -251,10 +257,11 @@ const Class_content = () => {
               </Button>
             </h3>
           ))}
+          <Link to="/addtest">
           <Button
             size="large"
             type="link"
-            onClick={() => alert("You pressed add test")}
+            // onClick={() => alert("You pressed add test")}
             style={{
               position: "absolute",
               right: "0px",
@@ -263,6 +270,7 @@ const Class_content = () => {
           >
             <PlusSquareFilled style={{ color: "#23A859", fontSize: "20px" }} />
           </Button>{" "}
+          </Link>
           <br />
         </div>
       </div>

@@ -60,7 +60,10 @@ const menu = (
 const Room = () => {
   return (
     <>
-      <Nav pageName="Nội dung lớp học" roomName="829717313 - Toán 11 - Nguyễn Thị A" path={icon_board}/>
+      <Nav pageName="Nội dung lớp học" 
+        roomName="829717313 - Toán 11 - Nguyễn Thị A" 
+        path={icon_board}
+        checkStu={true}/>
       <div
         className="Content"
         style={{

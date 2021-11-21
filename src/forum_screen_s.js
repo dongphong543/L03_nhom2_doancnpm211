@@ -29,7 +29,7 @@ const Forum = () => {
   return (
     <div>
       {" "}
-      <Nav pageName="Diễn đàn"/>
+      <Nav pageName="Diễn đàn" checkStu={true}/>
       {announcements.map((announcement) => (
         <div>
           <Card

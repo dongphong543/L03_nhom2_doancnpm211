@@ -29,7 +29,9 @@ const Class_content = () => {
 
   return (
     <div>
-      <Nav pageName="Môn học" path={board}/>
+      <Nav pageName="Lớp học" 
+          path={board} 
+          checkStu={false} />
       <div
         style={{
           display: "flex",
@@ -60,7 +62,7 @@ const Class_content = () => {
                 marginBottom: "15px",
               }}
             >
-              <Link to="/classroom">
+              <Link to="/class">
                 <Button
                   size="large"
                   type="link"

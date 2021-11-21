@@ -1,37 +1,58 @@
 import React from "react";
-import { Menu, Dropdown, message, Badge } from "antd";
+import { Menu, Dropdown, message, Button, Card} from "antd";
 import {
   FileDoneOutlined,
   UserOutlined,
   CloseOutlined,
   CaretDownOutlined,
-  BellFilled,
+  TeamOutlined,
+  PlusCircleOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom"; // v6
-
+import PropTypes from "prop-types"
 import logo from "./assets/S_letter.png";
 import bluebar from "./assets/blue_bar.png";
 import redbar from "./assets/red_bar.png";
 
 var myCurrentDate = new Date();
 
-const App = ( props ) => (
-  <div
+const Navbar = (props) => {
+  const link = (props.checkStu) ? "/shome" : "/home";
+  const infoLink = (props.checkStu) ? "/stuinfo" : "/teainfo";
+  return (
+    <div
     style={{
       overflowX: "hidden",
       overflowY: "hidden",
       position: "relative",
+      overflowY: "hidden",
     }}
-  >
-    <img
-      src={logo}
-      style={{
-        marginTop: "20px",
-        marginLeft: "35px",
-        height: "38px",
-        position: "absolute",
-      }}
-    />
+    >
+    <Link to={link}>
+      <Card 
+        style={{
+          position: "absolute",
+          height: "0px",
+          width: "0px",
+          marginTop: "-5px",
+          marginLeft: "8px",
+          zIndex: 10,
+       }}
+      >
+        {props.checkStu}
+       <img
+         src={logo}
+         style={{
+           // marginTop: "20px",
+           // marginLeft: "35px",
+           height: "38px",
+           position: "absolute",
+       }}
+         />
+       </Card>
+      </Link> 
+      
+    
     <div
       style={{
         marginTop: "20px",
@@ -88,24 +109,38 @@ const App = ( props ) => (
         <Dropdown
           overlay={
             <Menu
-              onClick={({ key }) => {
-                message.info(`Click on ${key}`);
-              }}
-              style={{ width: "120px", marginLeft: "3vw", marginTop: "1vh" }}
+              style={{ width: "150px", marginLeft: "3vw", marginTop: "1vh" }}
             >
-              <Link to="/info">
+              <Link to={infoLink}>
                 <Menu.Item key="Cá nhân">
                   <UserOutlined style={{ marginRight: "1vw" }} />
                   Cá nhân
                 </Menu.Item>{" "}
               </Link>
+              
+              {!props.checkStu &&
+              <Link to="/classManage">
+                <Menu.Item key="Quản lý lớp học">
+                <TeamOutlined style={{ marginRight: "1vw" }} />
+                  Quản lý lớp học
+                </Menu.Item>{" "}
+              </Link>}
 
+              {!props.checkStu &&
+              <Link to="/createclass">
+                <Menu.Item key="Tạo lớp học">
+                  <PlusCircleOutlined style={{ marginRight: "1vw" }} />
+                  Tạo lớp học
+                </Menu.Item>{" "}
+              </Link>}
+
+              {props.checkStu &&
               <Link to="/ptstable">
                 <Menu.Item key="Bảng điểm">
                   <FileDoneOutlined style={{ marginRight: "1vw" }} />
                   Bảng điểm
                 </Menu.Item>{" "}
-              </Link>
+              </Link>}
 
               <Link to="/">
                 <Menu.Item key="Đăng xuất" style={{ color: "red" }}>
@@ -165,7 +200,7 @@ const App = ( props ) => (
         // maxHeight: "60vh",
         height: "355px",
         overflowX: "hidden",
-        // overflowY: "hidden",
+        overflowY: "hidden",
       }}
     />
 
@@ -182,6 +217,12 @@ const App = ( props ) => (
         }}
       />
   </div>
-);
+  )
+}
 
-export default App;
+Navbar.propTypes = {
+  checkStu: PropTypes.bool,
+}
+
+export default Navbar
+

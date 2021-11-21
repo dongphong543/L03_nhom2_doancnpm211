@@ -154,7 +154,9 @@ function App () {
 
     return (
         <div>
-            <Navbar pageName="Quản lý điểm" path={plus} />
+            <Navbar pageName="Quản lý điểm" 
+                path={plus} 
+                checkStu={false}/>
             <div style={{
                 width: "70vw",
                 marginTop: '5vw',

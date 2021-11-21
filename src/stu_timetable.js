@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Card, Input } from "antd";
+import { Row, Col, Card, Input, Button } from "antd";
 import "./App.css";
 
 import agenda from "./assets/icon_agenda.png";
@@ -86,7 +86,8 @@ const Period = ({period}) => {
 const Timetable = () => (
   <div style={{ marginBottom: "20vh"}}>
     <Nav pageName="Thời khóa biểu"
-        path={agenda}/>
+        path={agenda}
+        checkStu={true}/>
 
   {/* ///////////////////////////////////////////////////////////////// */}
   <Row >
@@ -162,9 +163,26 @@ const Timetable = () => (
   <Period period="Tiết 4"/>
   <Period period="Tiết 5"/>
 
-
-
+  <div style={{
+        verticalAlign: "middle",
+        textAlign: "center",}}>
+    <Button
+      style={{
+        borderRadius: "8px",
+        backgroundColor: "#1F468B",
+        borderColor: "#1F468B",
+        height: "40px",
+        marginTop: "20px",
+        margin: "30px 0px",
+      }}
+      size="large"
+      type="primary"
+      onClick={() => alert("Lưu thời khóa biểu thành công")}
+    >
+    <b style={{ fontSize: "16px" }}>Lưu</b>
+    </Button>
   </div>
+</div>
 );
 
 export default Timetable;
