@@ -22,7 +22,7 @@ const App = () => {
     <div className="App">
       <Navbar 
         pageName="Steasy!"
-        intro="Từ nay việc học trở nên dễ dàng và ngăn nắp hơn bao giờ hết"
+        intro="Từ nay việc dạy học trở nên gần gũi và hiệu quả hơn bao giờ hết"
         background={teacher}
         checkStu={false}
         />
