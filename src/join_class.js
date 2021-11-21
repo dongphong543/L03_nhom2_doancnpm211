@@ -8,7 +8,9 @@ import { Link } from "react-router-dom";
 const join_class = () => {
   return (
     <div>
-      <Nav pageName="Tham gia lớp học" path={join}/>
+      <Nav pageName="Tham gia lớp học" 
+          path={join}
+          checkStu={true}/>
 
       <div
         style={{

@@ -92,7 +92,8 @@ const Class_content = () => {
     <div>
       <Nav pageName="Nội dung lớp học"
            roomName="829717313 - Toán 11 - Nguyễn Thị A"
-           path={board}/>
+           path={board}
+           checkStu={false}/>
 
       <div
         style={{

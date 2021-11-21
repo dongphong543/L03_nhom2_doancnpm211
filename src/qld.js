@@ -154,33 +154,9 @@ function App () {
 
     return (
         <div>
-            <Navbar />
-            <div
-                style={{
-                marginLeft: "10vw",
-                marginTop: "5vh",
-                }}
-            >
-            <b style={{ fontSize: "40px" }}> Quản lý điểm </b>
-            <br />
-            </div>
-            <img
-                src={plus}
-                style={{
-                marginLeft: "77vw",
-                marginTop: "-187px",
-                height: "210px",
-                }}
-            />
-            <hr
-                style={{
-                    backgroundColor: "#eee",
-                    height: 0.05,
-                    width: "auto",
-                    borderColor: "transparent",
-                    boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-                }}
-            />
+            <Navbar pageName="Quản lý điểm" 
+                path={plus} 
+                checkStu={false}/>
             <div style={{
                 width: "70vw",
                 marginTop: '5vw',

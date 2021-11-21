@@ -29,35 +29,9 @@ const Class_content = () => {
 
   return (
     <div>
-      <Nav />
-      <div
-        style={{
-          marginLeft: "10vw",
-          marginTop: "5vh",
-        }}
-      >
-        <b style={{ fontSize: "40px" }}> Môn học </b>
-        <br />
-      </div>
-      <img
-        src={board}
-        style={{
-          marginLeft: "70vw",
-          marginTop: "-170px",
-          height: "210px",
-        }}
-      />
-      <hr
-        style={{
-          // marginTop: "vh",
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-        }}
-      />
-
+      <Nav pageName="Lớp học" 
+          path={board} 
+          checkStu={false} />
       <div
         style={{
           display: "flex",
@@ -88,7 +62,7 @@ const Class_content = () => {
                 marginBottom: "15px",
               }}
             >
-              <Link to="/classroom">
+              <Link to="/class">
                 <Button
                   size="large"
                   type="link"

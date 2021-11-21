@@ -86,7 +86,8 @@ const Period = ({period}) => {
 const Timetable = () => (
   <div style={{ marginBottom: "20vh"}}>
     <Nav pageName="Thời khóa biểu"
-        path={agenda}/>
+        path={agenda}
+        checkStu={true}/>
 
   {/* ///////////////////////////////////////////////////////////////// */}
   <Row >

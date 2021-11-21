@@ -33,6 +33,7 @@ import {
   DownOutlined,
 } from "@ant-design/icons";
 import Nav from "./navbar";
+import InfoTable from "./InfoTable"
 // const onClick = ({ key }) => {
 //     message.info(`Click on item ${key}`);
 //   };
@@ -45,10 +46,19 @@ import Nav from "./navbar";
 // );
 
 var myCurrentDate = new Date();
+const Info = {
+  name: "Nguyễn Văn A",
+  MS: "123456789",
+  dateOfBirth: "01/01/2001",
+  address: "Số X, đường Y, phường Z, quận A, thành phố B",
+  SDT: "0123456789",
+  password: "******"
+}
 
 const Info_screen = () => {
   return (
     <div>
+      
       {/* <div className = "Header" style={{ height: "200px" }}>
                 <div className="header-nav" style={{ display: "inline-flex", marginTop: 10, marginLeft: 30, height: '30px' }}>
                     <div>
@@ -81,8 +91,10 @@ const Info_screen = () => {
                     <b>Cá nhân</b>
                 </div>
             </div> */}
-      <Nav />
-      <div
+      <Nav pageName = "Thông tin cá nhân" 
+          path = {icon_male}
+          checkStu={false}/>
+      {/* <div
         style={{
           marginLeft: "10vw",
           marginTop: "5vh",
@@ -98,8 +110,8 @@ const Info_screen = () => {
           marginTop: "-34vh",
           maxHeight: "40vh",
         }}
-      />
-      <hr
+      /> */}
+      {/* <hr
         style={{
           // marginTop: "vh",
           backgroundColor: "#eee",
@@ -108,7 +120,7 @@ const Info_screen = () => {
           borderColor: "transparent",
           boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
         }}
-      />
+      /> */}
       <div
         className="Content"
         style={{
@@ -241,6 +253,7 @@ const Info_screen = () => {
         >
           <b style={{ color: "white" }}>Chỉnh sửa</b>
         </Button>
+        <InfoTable/>
       </div>
     </div>
   );

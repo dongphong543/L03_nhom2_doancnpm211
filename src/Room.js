@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import icon_board from "./assets/icon_board.png";
-import logo from "./assets/S_letter.png";
-import bluebar from "./assets/blue_bar.png";
-import redbar from "./assets/red_bar.png";
 import {
   BellFilled,
   CaretDownOutlined,
@@ -63,35 +60,10 @@ const menu = (
 const Room = () => {
   return (
     <>
-      <Nav />
-      <div
-        style={{
-          marginLeft: "10vw",
-          marginTop: "5vh",
-        }}
-      >
-        <b style={{ fontSize: "40px" }}> Nội dung lớp học </b>
-        <br />
-        <b style={{ fontSize: "20px" }}>829717313 - Toán 11 - Nguyễn Thị A</b>
-      </div>
-      <img
-        src={icon_board}
-        style={{
-          marginLeft: "75vw",
-          marginTop: "-34vh",
-          maxHeight: "40vh",
-        }}
-      />
-      <hr
-        style={{
-          // marginTop: "vh",
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-        }}
-      />
+      <Nav pageName="Nội dung lớp học" 
+        roomName="829717313 - Toán 11 - Nguyễn Thị A" 
+        path={icon_board}
+        checkStu={true}/>
       <div
         className="Content"
         style={{

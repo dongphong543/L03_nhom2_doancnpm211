@@ -1,5 +1,4 @@
 import React from "react";
-// import Button from "@restart/ui/esm/Button"
 import { Button, Divider, Input } from "antd"
 import { useState } from "react"
 import ClasContent from "./class_content"

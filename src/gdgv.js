@@ -13,8 +13,8 @@ import teacher from "./assets/tea_backgr.png";
 
 const style = {
   marginTop: "5vh",
-  marginLeft: "22vh",
-  marginRight: "-17vh",
+  marginLeft: "9.5vw",
+  marginRight: "-6vw",
 };
 
 const App = () => {
@@ -24,10 +24,15 @@ const App = () => {
         pageName="Steasy!"
         intro="Từ nay việc học trở nên dễ dàng và ngăn nắp hơn bao giờ hết"
         background={teacher}
+        checkStu={false}
         />
       <Row>
-        <Col style={style}>
-          <Link to="/class">
+        <Col style={{
+          marginLeft: "9.5vw",
+          marginTop: "5vh",
+          marginRight: "-6vw",
+        }}>
+          <Link to="/teachersubject">
             <CardC link={board} text="Lớp học" />{" "}
           </Link>
         </Col>
@@ -37,13 +42,23 @@ const App = () => {
           </Link>
         </Col>
         <Col style={style}>
-          <CardC link={students} text="Quản lý lớp học" />
+          <Link to="/classManage">
+            <CardC link={students} text="Quản lý lớp học" />
+          </Link>
         </Col>
         <Col style={style}>
-          <CardC link={agenda} text="Lịch dạy học" />
+          <Link to="/teatimetable">
+            <CardC link={agenda} text="Lịch dạy học" />
+          </Link>
         </Col>
-        <Col style={style}>
-          <CardC link={female} text="Cá nhân" />
+        <Col style={{
+          marginLeft: "9.5vw",
+          marginTop: "5vh",
+          marginRight: "9vw", 
+        }}>
+          <Link to="/teainfo">
+            <CardC link={female} text="Cá nhân" />
+          </Link>
         </Col>
       </Row>
     </div>
