@@ -34,93 +34,23 @@ import {
 } from "@ant-design/icons";
 import Nav from "./navbar";
 import InfoTable from "./InfoTable"
-// const onClick = ({ key }) => {
-//     message.info(`Click on item ${key}`);
-//   };
-// const menu = (
-//     <Menu onClick={onClick}>
-//         <Menu.Item key="1"> <UserOutlined style={{marginRight: "1vw"}}/> Cá nhân </Menu.Item>
-//         <Menu.Item key="2"> <FileDoneOutlined style={{marginRight: "1vw"}} /> Bảng điểm </Menu.Item>
-//         <Menu.Item key="3" style={{ color: "red" }}><CloseOutlined style={{marginRight: "1vw"}} /> Đăng xuất </Menu.Item>
-//     </Menu>
-// );
+import { tsConstructorType } from "@babel/types";
 
 var myCurrentDate = new Date();
-const Info = {
-  name: "Nguyễn Văn A",
-  MS: "123456789",
-  dateOfBirth: "01/01/2001",
-  address: "Số X, đường Y, phường Z, quận A, thành phố B",
-  SDT: "0123456789",
-  password: "******"
-}
 
 const Info_screen = () => {
+  const[hide, setHide] = useState("true");
+  {const input = document.querySelector('input');
+  const log = document.getElementById('log');
+  if(input) input.addEventListener('change', updateValue);
+  function updateValue(e) {
+    log.textContent = e.target.value;
+  }}
   return (
     <div>
-      
-      {/* <div className = "Header" style={{ height: "200px" }}>
-                <div className="header-nav" style={{ display: "inline-flex", marginTop: 10, marginLeft: 30, height: '30px' }}>
-                    <div>
-                        <img src={logo} height='40px' />
-                    </div>
-                    <div className="header-blue-bar">
-                        <div style={{ marginTop: "2px", textAlign: "left", marginLeft:'20px'}}> 
-                        Ngày <b> {myCurrentDate.getDate()} </b> tháng <b> {myCurrentDate.getMonth()} </b> năm <b> {myCurrentDate.getFullYear()} </b>
-                            <Badge count={7} size="small" style={{color:"red"}}>
-                                <BellFilled style={{
-                                    color: "#4AA0EB",
-                                    marginLeft: "37vw",
-                                }} />
-                            </Badge>
-                        </div>
-
-                    </div>
-                    <div className="header-red-bar">
-                        <div style={{ marginTop: "4px", textAlign: "left" ,  marginLeft: "20px", color: "white" }}>
-                            Xin chào, <b>Nguyễn Trung Phong</b>
-                            <Dropdown overlay={menu} >
-                                <a className="ant-dropdown-link" onClick={e => e.preventDefault()} style = {{marginLeft: '10px'}}>
-                                <CaretDownOutlined />
-                                </a>
-                            </Dropdown>
-                        </div>
-                    </div>
-                </div>
-                <div style={{ textAlign: 'left', marginLeft: '140px', marginTop: '50px', fontSize: '50px'}}>
-                    <b>Cá nhân</b>
-                </div>
-            </div> */}
       <Nav pageName = "Thông tin cá nhân" 
           path = {icon_male}
           checkStu = {true} />
-      {/* <div
-        style={{
-          marginLeft: "10vw",
-          marginTop: "5vh",
-        }}
-      >
-        <b style={{ fontSize: "40px" }}> Thông tin cá nhân </b>
-        <br />
-      </div>
-      <img
-        src={icon_male}
-        style={{
-          marginLeft: "75vw",
-          marginTop: "-34vh",
-          maxHeight: "40vh",
-        }}
-      /> */}
-      {/* <hr
-        style={{
-          // marginTop: "vh",
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-        }}
-      /> */}
       <div
         className="Content"
         style={{
@@ -144,9 +74,13 @@ const Info_screen = () => {
         >
           <Col span={6} style={{ paddingLeft: "20px", color: "#F01836" }}>
             <b>Họ và tên</b>
+            
+            {/* <p id="log"></p> */}
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-            <b>Nguyễn Văn A</b>
+            {/* <b>Nguyễn Văn A</b> */}
+            {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">Nguyễn Văn A</p>:<input placeholder="Nguyễn Văn A" name="name" style={{height:"30px", color:"#1F468B"}}/>}
+            
           </Col>
         </Row>
         <Row
@@ -164,7 +98,8 @@ const Info_screen = () => {
             <b>Mã số người dùng</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-            <b>123456789</b>
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">123456789</p>:<input placeholder="123456789" name="name" style={{height:"30px", color:"#1F468B"}}/>}
+
           </Col>
         </Row>
         <Row
@@ -182,7 +117,7 @@ const Info_screen = () => {
             <b>Ngày sinh</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-            <b>01/01/2001</b>
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">01/01/2001</p>:<input placeholder="01/01/2001" type ="date" name="name" style={{height:"30px", color:"#1F468B"}}/>}
           </Col>
         </Row>
         <Row
@@ -200,7 +135,8 @@ const Info_screen = () => {
             <b>Địa chỉ thường trú</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-            <b>Số X, đường Y, phường Z, quận A, thành phố B</b>
+            {/* <b>Số X, đường Y, phường Z, quận A, thành phố B</b> */}
+            {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">Số X, đường Y, phường Z, quận A, thành phố B</p>:<input placeholder="Số X, đường Y, phường Z, quận A, thành phố B" name="name" style={{height:"30px", width:"35vw", color:"#1F468B"}}/>}
           </Col>
         </Row>
         <Row
@@ -218,7 +154,7 @@ const Info_screen = () => {
             <b>Số điện thoại</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-            <b>0123456789</b>
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">0123456789</p>:<input placeholder="0123456789" name="name" style={{height:"30px", color:"#1F468B"}}/>}
           </Col>
         </Row>
         <Row
@@ -236,7 +172,7 @@ const Info_screen = () => {
             <b>Mật khẩu</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-            <b>******</b>
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">******</p>:<input placeholder="******" name="name" type = "password" style={{height:"30px", color:"#1F468B"}}/>}
           </Col>
         </Row>
         <Button
@@ -249,11 +185,10 @@ const Info_screen = () => {
           }}
           size="large"
           type="primary"
-          onClick={() => alert("You pressed")} //arrow function
+          onClick={()=>setHide(!hide)} //arrow function
         >
           <b style={{ color: "white" }}>Chỉnh sửa</b>
         </Button>
-        <InfoTable/>
       </div>
     </div>
   );
