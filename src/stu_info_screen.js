@@ -79,7 +79,7 @@ const Info_screen = () => {
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
             {/* <b>Nguyễn Văn A</b> */}
-            {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">Nguyễn Văn A</p>:<input placeholder="Nguyễn Văn A" name="name" style={{height:"30px", color:"#1F468B"}}/>}
+            {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">Nguyễn Văn A</p>:<input placeholder="Nguyễn Văn A" name="name" style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
             
           </Col>
         </Row>
@@ -98,7 +98,7 @@ const Info_screen = () => {
             <b>Mã số người dùng</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">123456789</p>:<input placeholder="123456789" name="name" style={{height:"30px", color:"#1F468B"}}/>}
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">123456789</p>:<input placeholder="123456789" name="name" style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
 
           </Col>
         </Row>
@@ -117,7 +117,7 @@ const Info_screen = () => {
             <b>Ngày sinh</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">01/01/2001</p>:<input placeholder="01/01/2001" type ="date" name="name" style={{height:"30px", color:"#1F468B"}}/>}
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">01/01/2001</p>:<input placeholder="01/01/2001" type ="date" name="name" style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
           </Col>
         </Row>
         <Row
@@ -136,7 +136,7 @@ const Info_screen = () => {
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
             {/* <b>Số X, đường Y, phường Z, quận A, thành phố B</b> */}
-            {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">Số X, đường Y, phường Z, quận A, thành phố B</p>:<input placeholder="Số X, đường Y, phường Z, quận A, thành phố B" name="name" style={{height:"30px", width:"35vw", color:"#1F468B"}}/>}
+            {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">Số X, đường Y, phường Z, quận A, thành phố B</p>:<input placeholder="Số X, đường Y, phường Z, quận A, thành phố B" name="name" style={{marginLeft:'50px', height:"30px", width:"35vw", color:"#1F468B"}}/>}
           </Col>
         </Row>
         <Row
@@ -154,7 +154,7 @@ const Info_screen = () => {
             <b>Số điện thoại</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">0123456789</p>:<input placeholder="0123456789" name="name" style={{height:"30px", color:"#1F468B"}}/>}
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">0123456789</p>:<input placeholder="0123456789" name="name" style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
           </Col>
         </Row>
         <Row
@@ -172,7 +172,7 @@ const Info_screen = () => {
             <b>Mật khẩu</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">******</p>:<input placeholder="******" name="name" type = "password" style={{height:"30px", color:"#1F468B"}}/>}
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">******</p>:<input placeholder="******" name="name" type = "password" style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
           </Col>
         </Row>
         <Button
