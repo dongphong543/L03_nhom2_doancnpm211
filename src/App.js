@@ -26,17 +26,17 @@ import AddTest from "./screens/teacher_test_screen/teacher_screen"
 
 function App() {
   // return <Login />;
-    // return <Signup />;
-    // return <NForum />;
-    // return <Join />;
-    // return <Timetable />;
-    // return <CreateClass />;
-    // return <Class />;
-    // return <Info_screen />;
-    // return <Room />; //for student, in future
-    // return <StuUI />;
-    // return <TeaUI />;
-    
+  // return <Signup />;
+  // return <NForum />;
+  // return <Join />;
+  // return <Timetable />;
+  // return <CreateClass />;
+  // return <Class />;
+  // return <Info_screen />;
+  // return <Room />; //for student, in future
+  // return <StuUI />;
+  // return <TeaUI />;
+
   return (
     <Router>
       <div>
