@@ -6,7 +6,6 @@ import "./student_test_screen.css";
 import { Button, Statistic } from "antd";
 import "antd/dist/antd.css";
 import ScreenHeader from "../components/screen_header";
-import Navbar from "../../navbar";
 import aplus from "../../assets/icon_aplus.png"
 import { Link } from "react-router-dom";
 
@@ -19,11 +18,10 @@ function StudentTestScreen() {
 
   return (
     <div className="container" style={{ overflowX: "hidden" }}>
-      {/* <ScreenHeader name="Bài Kiểm Tra"></ScreenHeader> */}
-      <Navbar pageName="Bài kiểm tra" 
-              path={aplus} 
-              checkStu={true}/>
-      <h2 style={{ textAlign: "center", fontSize: "40px" }}>
+      <ScreenHeader name="Bài Kiểm Tra"
+                    path={aplus} 
+                    checkStu={true} />
+      <h2 style={{ marginTop: "10vh", textAlign: "center", fontSize: "40px" }}>
         Kiểm tra 15 phút
       </h2>
 
