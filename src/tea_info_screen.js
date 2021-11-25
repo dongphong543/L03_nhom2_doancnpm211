@@ -58,7 +58,7 @@ const Info_screen = () => {
     <div>
       <Nav pageName = "Thông tin cá nhân" 
           path = {icon_male}
-          checkStu = {true} />
+          checkStu = {false} />
       <div
         className="Content"
         style={{
