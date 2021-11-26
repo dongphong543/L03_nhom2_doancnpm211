@@ -19,6 +19,8 @@ import SForum from "./forum_screen_s";
 import StuUI from "./gdhs";
 import TeaUI from "./gdgv";
 import ClassManage from "./qllh";
+import ClassManage1 from "./qllh1";
+import ClassManage2 from "./qllh2";
 import MarkManage from "./qld";
 import TestScreen from "./screens/testscreen/student_test_screen";
 import CreateClass from "./create_class"
@@ -59,6 +61,8 @@ function App() {
           <Route exact path="/studentsubject" element={<StuSubjectScreen />} />
           <Route exact path="/testui" element={<TestScreen />} />
           <Route exact path="/classmanage" element={<ClassManage />} />
+          <Route exact path="/classmanage1" element={<ClassManage1 />} />
+          <Route exact path="/classmanage2" element={<ClassManage2 />} />
           <Route exact path="/markmanage" element={<MarkManage />} />
           <Route exact path="/createclass" element={<CreateClass />} />
           <Route exact path="/addtest" element={<AddTest />} />
