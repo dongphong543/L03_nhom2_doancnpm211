@@ -3,37 +3,14 @@ import { Button, Input } from "antd";
 import "./App.css";
 import join from "./assets/icon_plus.png";
 import Nav from "./navbar";
-
-const join_class = () => {
+const Create_class = () => {
+  const [classId, setClassId] = React.useState(Math.floor(Math.random() * 100000000) + 1);
+  const [classroom, setClassroom] = React.useState("");
   return (
     <div>
-      <Nav pageName="Tạo lớp học"
-           path={join}/>
-      {/* <div
-        style={{
-          marginLeft: "10vw",
-          marginTop: "7vh",
-        }}
-      >
-        <b style={{ fontSize: "40px" }}>Tạo lớp học</b>
-      </div>
-      <img
-        src={join}
-        style={{
-          marginLeft: "70vw",
-          marginTop: "-200px",
-          height: "210px",
-        }}
-      />
-      <hr
-        style={{
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-        }}
-      /> */}
+      <Nav pageName="Tạo lớp học"  
+          path={join} checkStu='false'
+          checkStu={false}/>
 
       <div
         style={{
@@ -47,7 +24,7 @@ const join_class = () => {
           Mã lớp học 
         </span> <br />
         <span style={{ color: "#1F468B", fontSize: "35px" }}>
-          12112021
+          {classId}
         </span>
         <br /> <br />
         <span style={{ color: "#1F468B", fontSize: "17px" }}>
@@ -64,6 +41,9 @@ const join_class = () => {
             height: "50px",
             borderRadius: "8px",
             marginBottom: "10px",
+          }}
+          onChange={(e) => {
+            setClassroom(e.target.value);
           }}
         />
         <br />
@@ -93,8 +73,14 @@ const join_class = () => {
           }}
           size="large"
           type="primary"
-          onClick={() => alert("You pressed")}
-        >
+          onClick={() => {
+            if (!classroom) alert("Vui lòng nhập tên lớp học")
+            else if (window.confirm("Tạo lớp thành công. Bạn có muốn trở về trang chủ ?")) {
+                document.location = "/home"
+            }
+            else window.location.reload();
+          }}
+         >
           <b style={{ fontSize: "16px" }}>Mở lớp</b>
         </Button>
       </div>
@@ -102,4 +88,4 @@ const join_class = () => {
   );
 };
 
-export default join_class;
+export default Create_class;

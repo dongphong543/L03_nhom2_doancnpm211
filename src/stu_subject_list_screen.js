@@ -7,42 +7,9 @@ import { Link } from "react-router-dom"; // v6
 import board from "./assets/icon_board.png";
 import Nav from "./navbar";
 
-const Class_content = () => {
-  const [subjects, setSubject] = useState([
-    {
-      id: 1,
-      name: "829717313 - Toán 11 - Nguyễn Thị A",
-    },
-    {
-      id: 2,
-      name: "NH 2021 - 2022 - Quốc phòng và An ninh - Lê Tấn C",
-    },
-    {
-      id: 3,
-      name: "NH 2021 - 2022 - Lịch sử 11 - Trần Văn H",
-    },
-    {
-      id: 4,
-      name: "NH 2021 - 2022 - Địa lý 11 - Hoàng Ngọc T",
-    },
-  ]);
-
+const Subject = (props) => {
   return (
-    <div>
-      <Nav pageName="Môn học" path={board}/>
-      <div
-        style={{
-          display: "flex",
-          margin: "auto",
-          width: "80vw",
-          flexWrap: "wrap",
-          marginTop: "3vh",
-        }}
-      >
-        {/* ////////////////////////// BÀI GIẢNG ////////////////////////// */}
-
-        <div style={{ width: "100%", float: "left" }}>
-          {subjects.map((subject) => (
+    <div style={{ width: "100%", float: "left" }}>
             <h3
               style={{
                 // borderRadius: "8px",
@@ -60,21 +27,44 @@ const Class_content = () => {
                 marginBottom: "15px",
               }}
             >
-              <Link to="/classroom">
+              <Link to={props.link}>
                 <Button
                   size="large"
                   type="link"
-                  // onClick={() => alert("You pressed on a subject")}
-                  key={subject.id}
                 >
                   <span style={{ color: "#1F468B", fontSize: "17px" }}>
-                    {subject.name}{" "}
+                    {props.name}{" "}
                   </span>
                 </Button>
               </Link>
             </h3>
-          ))}
         </div>
+  )
+}
+
+const Class_content = () => {
+  return (
+    <div>
+      <Nav pageName="Môn học" 
+          path={board}
+          checkStu={true}/>
+      <div
+        style={{
+          display: "flex",
+          margin: "auto",
+          width: "80vw",
+          flexWrap: "wrap",
+          marginTop: "3vh",
+        }}
+      >
+      <Subject name="NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1"
+              link="/studentsubject/class1" />
+      <Subject name="NH 2021 - 2022 - Quốc phòng và An ninh - Lê Tấn C - Lớp 12A1"
+              link="/studentsubject/class2" />
+      <Subject name="NH 2021 - 2022 - Lịch sử 11 - Trần Văn H - Lớp 12A1"
+              link="/studentsubject/class3" />
+      <Subject name="NH 2021 - 2022 - Địa lý 11 - Hoàng Ngọc T - Lớp 12A1"
+              link="/studentsubject/class4" />
       </div>
     </div>
   );

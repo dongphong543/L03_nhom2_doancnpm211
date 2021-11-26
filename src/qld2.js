@@ -12,8 +12,8 @@ function App () {
     const [dataSource, setDataSource] = useState([
         {
             id: '1',
-            name: 'Đinh Văn A',
-            code: '1533781',
+            name: 'Đinh Thị Quang',
+            code: '1511781',
             p15: '10',
             p45: '10',
             gk: '10',
@@ -21,8 +21,8 @@ function App () {
         },
         {
             id: '2',
-            name: 'Nguyễn Văn B',
-            code: '1533782',
+            name: 'Phan Văn B',
+            code: '1511782',
             p15: '10',
             p45: '10',
             gk: '9',
@@ -30,8 +30,8 @@ function App () {
         },
         {
             id: '3',
-            name: 'Nguyễn Văn C',
-            code: '1533783',
+            name: 'Phan Văn C',
+            code: '1511783',
             p15: '10',
             p45: '7',
             gk: '5',
@@ -39,8 +39,8 @@ function App () {
         },
         {
             id: '4',
-            name: 'Nguyễn Văn D',
-            code: '1533784',
+            name: 'Phan Văn D',
+            code: '1511784',
             p15: '8',
             p45: '7',
             gk: '10',
@@ -48,8 +48,8 @@ function App () {
         },
         {
             id: '5',
-            name: 'Nguyễn Văn E',
-            code: '1533785',
+            name: 'Phan Văn E',
+            code: '1511785',
             p15: '8',
             p45: '7',
             gk: '8',
@@ -57,8 +57,8 @@ function App () {
         },
         {
             id: '6',
-            name: 'Nguyễn Văn F',
-            code: '1533786',
+            name: 'Phan Văn F',
+            code: '1511786',
             p15: '6',
             p45: '7',
             gk: '7',
@@ -66,8 +66,8 @@ function App () {
         },
         {
             id: '7',
-            name: 'Nguyễn Văn G',
-            code: '1533787',
+            name: 'Phan Văn G',
+            code: '1511787',
             p15: '10',
             p45: '10',
             gk: '10',
@@ -156,7 +156,7 @@ function App () {
         <div>
             <Navbar
                 pageName="Quản lý điểm" 
-                roomName="NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1" 
+                roomName="NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A7" 
                 path={plus} 
                 checkStu={false}
             />

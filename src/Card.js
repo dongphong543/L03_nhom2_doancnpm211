@@ -8,7 +8,7 @@ const CardC = ({ link, text }) => {
       <Card
         style={{
           padding: "7px",
-          width: "180px",
+          width: "150px",
           height: "115px",
           textAlign: "center",
           borderRadius: "8px",

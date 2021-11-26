@@ -6,8 +6,10 @@ import NavBar from "../../navbar";
 function ScreenHeader(props) {
   return (
     <div className="header">
-      <NavBar />
-      <b id="title">{props.name}</b>
+      <NavBar pageName={props.name}
+              path={props.path}
+              checkStu={props.checkStu}/>
+      {/* <b id="title">{props.name}</b> */}
     </div>
   );
 }

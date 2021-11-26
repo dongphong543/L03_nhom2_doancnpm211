@@ -4,10 +4,14 @@ import "./App.css";
 import join from "./assets/icon_plus.png";
 import Nav from "./navbar";
 
-const join_class = () => {
+const Join_class = () => {
+  const [classroom, setClassroom] = React.useState("");
   return (
     <div>
-      <Nav pageName="Tham gia lớp học" path={join}/>
+      <Nav pageName="Tham gia lớp học" 
+          path={join}
+          checkStu={true}/>
+
       <div
         style={{
           marginTop: "10vh",
@@ -30,6 +34,9 @@ const join_class = () => {
             height: "50px",
             borderRadius: "8px",
             marginBottom: "10px",
+          }}
+          onChange={(e) => {
+            setClassroom(e.target.value);
           }}
         />
         <br />
@@ -58,8 +65,13 @@ const join_class = () => {
           }}
           size="large"
           type="primary"
-          onClick={() => alert("You pressed")}
-        >
+          onClick={() => {
+            if (!classroom) alert("Vui lòng nhập tên lớp học")
+            else if (window.confirm("Tham gia lớp thành công. Bạn có muốn trở về trang chủ ?")) {
+                document.location = "/shome"
+            }
+            else window.location.reload();
+          }}>
           <b style={{ fontSize: "16px" }}>Tham gia</b>
         </Button>
       </div>
@@ -67,4 +79,4 @@ const join_class = () => {
   );
 };
 
-export default join_class;
+export default Join_class;

@@ -50,38 +50,38 @@ const styleButton2 = {
 function App () {
     const [dataSource, setDataSource] = useState([
         {
-            name: 'Đinh Văn A',
-            code: '1533781',
+            name: 'Đinh Gia Quang',
+            code: '1911900',
             id: 1
         },
         {
-            name: 'Nguyễn Văn B',
-            code: '1533782',
+            name: 'Trần Văn B',
+            code: '1522782',
             id: 2
         },
         {
-            name: 'Nguyễn Văn C',
+            name: 'Trần Văn C',
             code: '1533783',
             id: 3
         },
         {
-            name: 'Nguyễn Văn D',
-            code: '1533784',
+            name: 'Trần Văn D',
+            code: '1522784',
             id: 4
         },
         {
-            name: 'Nguyễn Văn E',
-            code: '1533785',
+            name: 'Trần Văn E',
+            code: '1522785',
             id: 5
         },
         {
-            name: 'Nguyễn Văn F',
-            code: '1533786',
+            name: 'Trần Văn F',
+            code: '1522786',
             id: 6
         },
         {
-            name: 'Nguyễn Văn G',
-            code: '1533787',
+            name: 'Trần Văn G',
+            code: '1522787',
             id: 7
         },
     ]);
@@ -109,16 +109,16 @@ function App () {
                     expandIcon={<CaretDownOutlined style={styleIcon}/>}
                 >
                     <SubMenu 
-                        title='NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1'
+                        title='NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A3'
                     >
-                        <Link to="/classmanage3"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A3</Menu.Item></Link>
+                        <Link to="/classmanage1"> <Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1</Menu.Item> </Link>
                         <Link to="/classmanage7"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A7</Menu.Item></Link>
                         <Link to="/createclass"><Menu.Item style={styleAdd}><b>Thêm lớp học</b></Menu.Item></Link>
                     </SubMenu>
                 </Menu>
             </Row>
             <Row>
-            <Link to="/markmanage1">
+            <Link to="/markmanage3">
                 <Button
                     style={{
                         borderRadius: "8px",

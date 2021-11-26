@@ -19,6 +19,7 @@ function SaveButton() {
           borderRadius: "8px",
           color: "white",
         }}
+        onClick={() => alert("Tạo bài kiểm tra thành công")}
       >
         Lưu
       </Button>

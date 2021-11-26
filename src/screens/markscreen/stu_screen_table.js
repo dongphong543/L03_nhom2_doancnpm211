@@ -1,14 +1,9 @@
 import React from "react";
 import "./screen_table.css";
 import ScreenHeader from "../components/screen_header";
-<<<<<<< HEAD
 import { Table } from "antd";
-=======
-import { Table } from 'antd'
-import Navbar from '../../navbar'
 import plus from "../../assets/icon_aplus.png";
 
->>>>>>> 57a4800fe0f039b3b689d13b5e855861742bacad
 function StuGradeTable() {
   const { Column, ColumnGroup } = Table;
   const data = [
@@ -39,32 +34,19 @@ function StuGradeTable() {
   ];
   return (
     <div>
-<<<<<<< HEAD
-      <ScreenHeader name="Bảng điểm"></ScreenHeader>
-      <hr
-        style={{
-          // marginTop: "vh",
-          backgroundColor: "#eee",
-          height: 0.05,
-          width: "auto",
-          borderColor: "transparent",
-          boxShadow: "0px -3px 8px 1px rgba(210, 210, 210, 0.6)",
-        }}
-      />
+      <ScreenHeader name="Bảng điểm" 
+                    path={plus}
+                    checkStu={true}/>
       <div
         style={{
           width: "80%",
           marginLeft: "auto",
           marginRight: "auto",
           padding: "10px",
+          marginTop: "10vh"
         }}
       >
         <Table dataSource={data}>
-=======
-      <Navbar pageName="Bảng điểm" path={plus} />
-      <div style={{ width: "80%", marginLeft: "auto", marginRight: "auto", padding: '10px' }}>
-        <Table dataSource={data} >
->>>>>>> 57a4800fe0f039b3b689d13b5e855861742bacad
           <ColumnGroup title="Năm học 2021 - 2022" align="center" b>
             <Column
               title="Tên môn học"
