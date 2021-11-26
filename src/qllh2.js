@@ -50,38 +50,38 @@ const styleButton2 = {
 function App () {
     const [dataSource, setDataSource] = useState([
         {
-            name: 'Đinh Văn A',
-            code: '1533781',
+            name: 'Đinh Thị Quang',
+            code: '1511781',
             id: 1
         },
         {
-            name: 'Nguyễn Văn B',
-            code: '1533782',
+            name: 'Phan Văn B',
+            code: '1511782',
             id: 2
         },
         {
-            name: 'Nguyễn Văn C',
-            code: '1533783',
+            name: 'Phan Văn C',
+            code: '1511783',
             id: 3
         },
         {
-            name: 'Nguyễn Văn D',
-            code: '1533784',
+            name: 'Phan Văn D',
+            code: '1511784',
             id: 4
         },
         {
-            name: 'Nguyễn Văn E',
-            code: '1533785',
+            name: 'Phan Văn E',
+            code: '1511785',
             id: 5
         },
         {
-            name: 'Nguyễn Văn F',
-            code: '1533786',
+            name: 'Phan Văn F',
+            code: '1511786',
             id: 6
         },
         {
-            name: 'Nguyễn Văn G',
-            code: '1533787',
+            name: 'Phan Văn G',
+            code: '1511787',
             id: 7
         },
     ]);
