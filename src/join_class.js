@@ -67,9 +67,10 @@ const Join_class = () => {
           type="primary"
           onClick={() => {
             if (!classroom) alert("Vui lòng nhập tên lớp học")
-            else {
-              if(!alert("Tham gia lớp thành công")) document.location = "/class"
+            else if (window.confirm("Tham gia lớp thành công. Bạn có muốn trở về trang chủ ?")) {
+                document.location = "/shome"
             }
+            else window.location.reload();
           }}>
           <b style={{ fontSize: "16px" }}>Tham gia</b>
         </Button>

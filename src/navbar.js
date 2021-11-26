@@ -153,10 +153,16 @@ const Navbar = (props) => {
         >
           <div style={{}}>
             Xin chào,{" "}
+            {props.checkStu ?
+            <b>
+              {" "}
+              Trần Nguyễn Văn B <CaretDownOutlined />{" "}
+            </b>
+            :
             <b>
               {" "}
               Nguyễn Văn A <CaretDownOutlined />{" "}
-            </b>
+            </b>}
           </div>
         </Dropdown>
       </span>

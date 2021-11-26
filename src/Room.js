@@ -42,26 +42,11 @@ const onClick = ({ key }) => {
   message.info(`Click on item ${key}`);
 };
 
-const menu = (
-  <Menu onClick={onClick}>
-    <Menu.Item key="1">
-      {" "}
-      <UserOutlined style={{ marginRight: "1vw" }} /> Cá nhân{" "}
-    </Menu.Item>
-    <Menu.Item key="2">
-      {" "}
-      <FileDoneOutlined style={{ marginRight: "1vw" }} /> Bảng điểm{" "}
-    </Menu.Item>
-    <Menu.Item key="3" style={{ color: "red" }}>
-      <CloseOutlined style={{ marginRight: "1vw" }} /> Đăng xuất{" "}
-    </Menu.Item>
-  </Menu>
-);
-const Room = () => {
+const Room = (props) => {
   return (
     <>
       <Nav pageName="Nội dung lớp học" 
-        roomName="NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1" 
+        roomName={props.room}
         path={icon_board}
         checkStu={true}/>
       <div

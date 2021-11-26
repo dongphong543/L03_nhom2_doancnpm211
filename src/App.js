@@ -6,14 +6,18 @@ import Signup from "./signup_screen";
 import StuTimetable from "./stu_timetable";
 import TeaTimetable from "./tea_timetable";
 import Join from "./join_class";
-import Class from "./class_content"; //teacher
-import Room from "./Room"; //student
+import TeaClass1 from "./tea_class1";
+import TeaClass2 from "./tea_class2";
+import TeaClass3 from "./tea_class3";
+import StuClass1 from "./stu_class1";
+import StuClass2 from "./stu_class2";
+import StuClass3 from "./stu_class3";
+import StuClass4 from "./stu_class4";
 import Tea_info_screen from "./tea_info_screen";
 import Stu_info_screen from "./stu_info_screen";
 import TeaSubjectScreen from "./tea_subject_list_screen";
 import StuSubjectScreen from "./stu_subject_list_screen";
 import Bangdiem from "./screens/markscreen/stu_screen_table";
-// import Forum from "./forum_screen";
 import NForum from "./forum_screen";
 import SForum from "./forum_screen_s";
 import StuUI from "./gdhs";
@@ -47,8 +51,13 @@ function App() {
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/shome" element={<StuUI />} />
           <Route exact path="/home" element={<TeaUI />} />
-          <Route exact path="/class" element={<Class />} />
-          <Route exact path="/classroom" element={<Room />} />
+          <Route exact path="/teachersubject/12A1" element={<TeaClass1 />} />
+          <Route exact path="/teachersubject/12A3" element={<TeaClass2 />} />
+          <Route exact path="/teachersubject/12A7" element={<TeaClass3 />} />
+          <Route exact path="/studentsubject/class1" element={<StuClass1 />} />
+          <Route exact path="/studentsubject/class2" element={<StuClass2 />} />
+          <Route exact path="/studentsubject/class3" element={<StuClass3 />} />
+          <Route exact path="/studentsubject/class4" element={<StuClass4 />} />
           <Route exact path="/forum" element={<NForum />} />
           <Route exact path="/sforum" element={<SForum />} />
           <Route exact path="/stutimetable" element={<StuTimetable />} />

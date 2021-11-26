@@ -75,9 +75,10 @@ const Create_class = () => {
           type="primary"
           onClick={() => {
             if (!classroom) alert("Vui lòng nhập tên lớp học")
-            else {
-              if(!alert("Tạo lớp thành công")) document.location = "/class"
+            else if (window.confirm("Tạo lớp thành công. Bạn có muốn trở về trang chủ ?")) {
+                document.location = "/home"
             }
+            else window.location.reload();
           }}
          >
           <b style={{ fontSize: "16px" }}>Mở lớp</b>
