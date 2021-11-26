@@ -17,7 +17,8 @@ import Nav from "./navbar";
 import { Link } from "react-router-dom";
 import AddLecture from "./AddLecture";
 
-const Class_content = () => {
+
+const Class_content = (props) => {
   const [lectures, setLectures] = useState([
     {
       id: 1,
@@ -87,13 +88,13 @@ const Class_content = () => {
 
   // Toggle add lecture
   const [showAddLec, setShowAddLec] = useState(false)
-
+  var a = localStorage.getItem('name')
   return (
     <div>
       <Nav pageName="Nội dung lớp học"
-           roomName="NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1" 
-           path={board}
-           checkStu={false}/>
+          roomName={props.room}
+          path={board}
+          checkStu={false}/>
 
       <div
         style={{

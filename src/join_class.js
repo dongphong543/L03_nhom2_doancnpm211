@@ -3,9 +3,9 @@ import { Button, Input } from "antd";
 import "./App.css";
 import join from "./assets/icon_plus.png";
 import Nav from "./navbar";
-import { Link } from "react-router-dom";
 
-const join_class = () => {
+const Join_class = () => {
+  const [classroom, setClassroom] = React.useState("");
   return (
     <div>
       <Nav pageName="Tham gia lớp học" 
@@ -35,6 +35,9 @@ const join_class = () => {
             borderRadius: "8px",
             marginBottom: "10px",
           }}
+          onChange={(e) => {
+            setClassroom(e.target.value);
+          }}
         />
         <br />
         <span style={{ color: "#1F468B", fontSize: "17px" }}>
@@ -52,7 +55,6 @@ const join_class = () => {
           }}
         />
         <br />
-        <Link to="/classroom">
         <Button
           style={{
             borderRadius: "8px",
@@ -63,14 +65,18 @@ const join_class = () => {
           }}
           size="large"
           type="primary"
-          onClick={() => alert("Tham gia lớp thành công")}
-        >
+          onClick={() => {
+            if (!classroom) alert("Vui lòng nhập tên lớp học")
+            else if (window.confirm("Tham gia lớp thành công. Bạn có muốn trở về trang chủ ?")) {
+                document.location = "/shome"
+            }
+            else window.location.reload();
+          }}>
           <b style={{ fontSize: "16px" }}>Tham gia</b>
         </Button>
-        </Link>
       </div>
     </div>
   );
 };
 
-export default join_class;
+export default Join_class;
