@@ -26,6 +26,8 @@ import ClassManage from "./qllh";
 import ClassManage1 from "./qllh1";
 import ClassManage2 from "./qllh2";
 import MarkManage from "./qld";
+import MarkManage1 from "./qld1";
+import MarkManage2 from "./qld2";
 import TestScreen from "./screens/testscreen/student_test_screen";
 import CreateClass from "./create_class"
 import AddTest from "./screens/teacher_test_screen/teacher_screen"
@@ -69,10 +71,12 @@ function App() {
           <Route exact path="/teachersubject" element={<TeaSubjectScreen />} />
           <Route exact path="/studentsubject" element={<StuSubjectScreen />} />
           <Route exact path="/testui" element={<TestScreen />} />
-          <Route exact path="/classmanage" element={<ClassManage />} />
-          <Route exact path="/classmanage1" element={<ClassManage1 />} />
-          <Route exact path="/classmanage2" element={<ClassManage2 />} />
-          <Route exact path="/markmanage" element={<MarkManage />} />
+          <Route exact path="/classmanage1" element={<ClassManage />} />
+          <Route exact path="/classmanage3" element={<ClassManage1 />} />
+          <Route exact path="/classmanage7" element={<ClassManage2 />} />
+          <Route exact path="/markmanage1" element={<MarkManage />} />
+          <Route exact path="/markmanage3" element={<MarkManage1 />} />
+          <Route exact path="/markmanage7" element={<MarkManage2 />} />
           <Route exact path="/createclass" element={<CreateClass />} />
           <Route exact path="/addtest" element={<AddTest />} />
         </Routes>

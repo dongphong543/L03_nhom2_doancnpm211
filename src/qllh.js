@@ -111,14 +111,14 @@ function App () {
                     <SubMenu 
                         title='NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1'
                     >
-                        <Link to="/classmanage1"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A3</Menu.Item></Link>
-                        <Link to="/classmanage2"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A7</Menu.Item></Link>
+                        <Link to="/classmanage3"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A3</Menu.Item></Link>
+                        <Link to="/classmanage7"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A7</Menu.Item></Link>
                         <Link to="/createclass"><Menu.Item style={styleAdd}><b>Thêm lớp học</b></Menu.Item></Link>
                     </SubMenu>
                 </Menu>
             </Row>
             <Row>
-            <Link to="/markmanage">
+            <Link to="/markmanage1">
                 <Button
                     style={{
                         borderRadius: "8px",
