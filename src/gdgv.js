@@ -42,7 +42,7 @@ const App = () => {
           </Link>
         </Col>
         <Col style={style}>
-          <Link to="/classManage">
+          <Link to="/classManage1">
             <CardC link={students} text="Quản lý lớp học" />
           </Link>
         </Col>
