@@ -91,7 +91,7 @@ const Class_content = () => {
   return (
     <div>
       <Nav pageName="Nội dung lớp học"
-           roomName="829717313 - Toán 11 - Nguyễn Thị A"
+           roomName="NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1" 
            path={board}
            checkStu={false}/>
 

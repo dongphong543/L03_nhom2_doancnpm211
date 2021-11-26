@@ -154,12 +154,15 @@ function App () {
 
     return (
         <div>
-            <Navbar pageName="Quản lý điểm" 
+            <Navbar
+                pageName="Quản lý điểm" 
+                roomName="NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1" 
                 path={plus} 
-                checkStu={false}/>
+                checkStu={false}
+            />
             <div style={{
                 width: "70vw",
-                marginTop: '5vw',
+                marginTop: '1vw',
                 marginLeft: '10vw',
                 marginRight: '10vw',
                 height: "25vw",
@@ -173,7 +176,7 @@ function App () {
                     bordered={false}
                     style={{
                     }}
-                />;
+                />
             </div>
             <Modal
                 title='Thay đổi điểm'

@@ -11,19 +11,15 @@ const Class_content = () => {
   const [subjects, setSubject] = useState([
     {
       id: 1,
-      name: "829717313 - Toán 11 - Nguyễn Thị A",
+      name: "NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1",
     },
     {
       id: 2,
-      name: "NH 2021 - 2022 - Quốc phòng và An ninh - Lê Tấn C",
+      name: "NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A3",
     },
     {
       id: 3,
-      name: "NH 2021 - 2022 - Lịch sử 11 - Trần Văn H",
-    },
-    {
-      id: 4,
-      name: "NH 2021 - 2022 - Địa lý 11 - Hoàng Ngọc T",
+      name: "NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A7",
     },
   ]);
 
