@@ -197,8 +197,7 @@ const Navbar = (props) => {
       style={{
         marginTop: "-300px",
         marginBottom: "-25vh",
-        // maxHeight: "60vh",
-        height: "355px",
+        height: "450px",
         overflowX: "hidden",
         overflowY: "hidden",
       }}

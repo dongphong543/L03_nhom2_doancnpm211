@@ -17,6 +17,7 @@ import Nav from "./navbar";
 import { Link } from "react-router-dom";
 import AddLecture from "./AddLecture";
 
+
 const Class_content = () => {
   const [lectures, setLectures] = useState([
     {
