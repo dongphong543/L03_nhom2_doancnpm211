@@ -29,7 +29,7 @@ const Day = ({day}) => {
 }
 
 const InputSubj = (props) => {
-  const [name, setName] = useState("asds")
+  const [name, setName] = useState("")
   return (
     <Col flex={1} >
         {props.onEdit &&
@@ -108,7 +108,7 @@ const Timetable = () => {
     <div style={{ marginBottom: "20vh"}}>
       <Nav pageName="Lịch dạy học"
           path={agenda}
-          checkStu={true}/>
+          checkStu={false}/>
 
     <Row >
       <Col flex={1}  
