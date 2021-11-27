@@ -7,6 +7,7 @@ import {
   BellFilled,
   CaretDownOutlined,
   LeftCircleFilled,
+  EyeInvisibleOutlined, EyeTwoTone
 } from "@ant-design/icons";
 import "./App.css";
 import {
@@ -34,26 +35,16 @@ import {
 } from "@ant-design/icons";
 import Nav from "./navbar";
 import InfoTable from "./InfoTable"
-// const onClick = ({ key }) => {
-//     message.info(`Click on item ${key}`);
-//   };
-// const menu = (
-//     <Menu onClick={onClick}>
-//         <Menu.Item key="1"> <UserOutlined style={{marginRight: "1vw"}}/> Cá nhân </Menu.Item>
-//         <Menu.Item key="2"> <FileDoneOutlined style={{marginRight: "1vw"}} /> Bảng điểm </Menu.Item>
-//         <Menu.Item key="3" style={{ color: "red" }}><CloseOutlined style={{marginRight: "1vw"}} /> Đăng xuất </Menu.Item>
-//     </Menu>
-// );
 
 var myCurrentDate = new Date();
 const Info_screen = () => {
   const[hide, setHide] = useState("true");
-  {const input = document.querySelector('input');
-  const log = document.getElementById('log');
-  if(input) input.addEventListener('change', updateValue);
-  function updateValue(e) {
-    log.textContent = e.target.value;
-  }}
+  const[name, setName] = useState("Nguyễn Văn A");
+  const[MS, setMS] = useState("123456789");
+  const[date, setDate] = useState("1970 - 01 - 01");
+  const[address, setAddress] = useState("Số X, đường Y, phường Z, quận A, thành phố B");
+  const[phone, setPhone] = useState("0123456789");
+  const[password, setPassword] = useState("123456");
   return (
     <div>
       <Nav pageName = "Thông tin cá nhân" 
@@ -87,7 +78,7 @@ const Info_screen = () => {
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
             {/* <b>Nguyễn Văn A</b> */}
-            {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">Nguyễn Văn A</p>:<input placeholder="Nguyễn Văn A" name="name" style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
+            {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">{name}</p>:<input placeholder={name} onChange={(e)=>setName(e.target.value)} style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
             
           </Col>
         </Row>
@@ -106,7 +97,7 @@ const Info_screen = () => {
             <b>Mã số người dùng</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">123456789</p>:<input placeholder="123456789" name="name" style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">{MS}</p>:<input placeholder= {MS} onChange={(e)=>setMS(e.target.value)} style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
 
           </Col>
         </Row>
@@ -125,7 +116,7 @@ const Info_screen = () => {
             <b>Ngày sinh</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">01/01/2001</p>:<input placeholder="01/01/2001" type ="date" name="name" style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">{date}</p>:<input placeholder={date} type ="date" onChange={(e)=>setDate(e.target.value)} style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
           </Col>
         </Row>
         <Row
@@ -144,7 +135,9 @@ const Info_screen = () => {
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
             {/* <b>Số X, đường Y, phường Z, quận A, thành phố B</b> */}
-            {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">Số X, đường Y, phường Z, quận A, thành phố B</p>:<input placeholder="Số X, đường Y, phường Z, quận A, thành phố B" name="name" style={{marginLeft:'50px', height:"30px", width:"35vw", color:"#1F468B"}}/>}
+            {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">
+              {address}
+              </p>:<input placeholder={address} onChange={(e)=>setAddress(e.target.value)} style={{marginLeft:'50px', height:"30px", width:"35vw", color:"#1F468B"}}/>}
           </Col>
         </Row>
         <Row
@@ -162,7 +155,7 @@ const Info_screen = () => {
             <b>Số điện thoại</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">0123456789</p>:<input placeholder="0123456789" name="name" style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">{phone}</p>:<input placeholder={phone} onChange={(e)=>setPhone(e.target.value)} style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
           </Col>
         </Row>
         <Row
@@ -180,7 +173,8 @@ const Info_screen = () => {
             <b>Mật khẩu</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">******</p>:<input placeholder="******" name="name" type = "password" style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} >******</p>
+          :<input placeholder={password} onChange={(e)=>setPassword(e.target.value)} type = "password" style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
           </Col>
         </Row>
         <Button
@@ -195,7 +189,8 @@ const Info_screen = () => {
           type="primary"
           onClick={()=>setHide(!hide)} //arrow function
         >
-          <b style={{ color: "white" }}>Chỉnh sửa</b>
+          {hide && <b style={{ color: "white" }}>Chỉnh sửa</b>}
+          {!hide && <b style={{ color: "white" }}>Lưu</b>}
         </Button>
       </div>
     </div>
