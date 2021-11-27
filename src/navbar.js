@@ -111,15 +111,17 @@ const Navbar = (props) => {
             <Menu
               style={{ width: "150px", marginLeft: "3vw", marginTop: "1vh" }}
             >
-              <Link to={infoLink}>
+              {
+                <Link to={infoLink}>
                 <Menu.Item key="Cá nhân">
                   <UserOutlined style={{ marginRight: "1vw" }} />
                   Cá nhân
                 </Menu.Item>{" "}
               </Link>
+              }
               
               {!props.checkStu &&
-              <Link to="/classManage">
+              <Link to="/classManage1">
                 <Menu.Item key="Quản lý lớp học">
                 <TeamOutlined style={{ marginRight: "1vw" }} />
                   Quản lý lớp học

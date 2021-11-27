@@ -8,7 +8,7 @@ import Nav from "./navbar"
 
 const Day = ({day}) => {
   return (
-    <Col flex={1} style={{ justifyContent: "center"}}>
+    <Col flex={1} style={{justifyContent: "center"}}>
       <Card
         type="inner"
         size="small"
