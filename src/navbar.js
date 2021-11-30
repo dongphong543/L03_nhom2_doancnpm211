@@ -75,12 +75,6 @@ const Navbar = (props) => {
         Ngày <b> {myCurrentDate.getDate()} </b> tháng
         <b> {myCurrentDate.getMonth() + 1} </b>
         năm <b> {myCurrentDate.getFullYear()} </b>
-        {/* <Badge count={5} size="small">
-          <BellFilled style={{ 
-            color: "#4AA0EB",
-            marginLeft: "400px", 
-          }} />
-        </Badge> */}
       </span>
 
       <img
