@@ -3,9 +3,10 @@ import ScreenHeader from "../components/screen_header";
 import QuestionItem from "./QuestionItem";
 import NewQuestion from "./components/new_question";
 import SaveButton from "./components/save_button";
-import plus from "../../assets/icon_aplus.png"
+import plus from "../../assets/icon_aplus.png";
 import ToolContainer from "./components/tool_container";
 import { Link } from "react-router-dom";
+import Nav from "../../navbar";
 
 function TeacherScreen() {
   const [questionsList, setQuestionsList] = useState([]);
@@ -29,20 +30,18 @@ function TeacherScreen() {
     setQuestionsList([...questionsList]);
   };
 
-  return (        
+  return (
     <div
       style={{
-        overflowX: "hidden",
-        // overflowY: "hidden",
+        // overflowX: "hidden",
         margin: "0auto",
       }}
     >
-      <ScreenHeader name="Tạo bài kiểm tra"
-                    path={plus}
-                    checkStu={false}/>
+      <Nav pageName="Tạo bài kiểm tra" path={plus} checkStu={false}></Nav>
       <div
         className="container"
         style={{
+          // overflowX: "hidden",
           width: "80vw",
           height: "100vh",
           margin: "0 auto",
@@ -50,8 +49,14 @@ function TeacherScreen() {
       >
         <ul style={{ marginTop: "10vh", padding: "0px" }}>
           {questionsList.map((e) => {
-            return (  
-              <div key={e.id} style={{ marginBottom: "10px" }}>
+            return (
+              <div
+                key={e.id}
+                style={{
+                  marginBottom: "10px",
+                  overflowX: "hidden",
+                }}
+              >
                 <h2>
                   {"Câu " +
                     (questionsList.findIndex((element) => element.id === e.id) +
@@ -68,7 +73,8 @@ function TeacherScreen() {
           })}
         </ul>
         <NewQuestion onAddQuestion={addQuestionHandler}></NewQuestion>
-        <Link to="/class"> <SaveButton /> </Link>
+          {" "}
+          <SaveButton />{" "}
       </div>
     </div>
   );

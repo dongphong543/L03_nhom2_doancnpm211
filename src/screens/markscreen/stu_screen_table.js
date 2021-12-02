@@ -4,6 +4,7 @@ import ScreenHeader from "../components/screen_header";
 import { Table } from "antd";
 import plus from "../../assets/icon_aplus.png";
 
+import Nav from "../../navbar"
 function StuGradeTable() {
   const { Column, ColumnGroup } = Table;
   const data = [
@@ -34,7 +35,7 @@ function StuGradeTable() {
   ];
   return (
     <div>
-      <ScreenHeader name="Bảng điểm" 
+      <Nav pageName="Bảng điểm" 
                     path={plus}
                     checkStu={true}/>
       <div
