@@ -73,10 +73,8 @@ function TeacherScreen() {
           })}
         </ul>
         <NewQuestion onAddQuestion={addQuestionHandler}></NewQuestion>
-        <Link to="/class">
           {" "}
           <SaveButton />{" "}
-        </Link>
       </div>
     </div>
   );

@@ -5,10 +5,9 @@ import MultiChoiceQuestion from "./multiplequestion/multiple_choice_questtion";
 import "./student_test_screen.css";
 import { Button, Statistic } from "antd";
 import "antd/dist/antd.css";
-import ScreenHeader from "../components/screen_header";
 import aplus from "../../assets/icon_aplus.png"
 import { Link } from "react-router-dom";
-
+import Nav from "../../navbar"
 function StudentTestScreen() {
   const deadline = 60 * 15 * 1000;
   const { Countdown } = Statistic;
@@ -18,7 +17,7 @@ function StudentTestScreen() {
 
   return (
     <div className="container" style={{ overflowX: "hidden" }}>
-      <ScreenHeader name="Bài Kiểm Tra"
+      <Nav pageName="Bài Kiểm Tra"
                     path={aplus} 
                     checkStu={true} />
       <h2 style={{ marginTop: "10vh", textAlign: "center", fontSize: "40px" }}>
@@ -36,7 +35,6 @@ function StudentTestScreen() {
         <OptionQuestion></OptionQuestion>
         <MultiChoiceQuestion></MultiChoiceQuestion>
         <div className="button-container">
-          <Link to="/classroom">
           <Button
             type="primary"
             onClick={submit}
@@ -45,7 +43,6 @@ function StudentTestScreen() {
           >
             Nộp Bài
           </Button>
-          </Link>
         </div>
       </div>
     </div>
