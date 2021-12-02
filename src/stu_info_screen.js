@@ -78,7 +78,7 @@ const Info_screen = () => {
             {/* <p id="log"></p> */}
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-            {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">{name}</p>:<input placeholder={name} onChange={(e)=>setName(e.target.value)} style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">{name}</p>:<Input placeholder={name} onChange={(e)=>setName(e.target.value)} style={{marginLeft:'50px', height:"30px", color:"#1F468B", width: "25vw"}}/>}
             
           </Col>
         </Row>
@@ -97,7 +97,7 @@ const Info_screen = () => {
             <b>Mã số người dùng</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">{MS}</p>:<input placeholder= {MS} onChange={(e)=>setMS(e.target.value)} style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
+          <p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">{MS}</p>
 
           </Col>
         </Row>
@@ -116,7 +116,7 @@ const Info_screen = () => {
             <b>Ngày sinh</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">{date}</p>:<input placeholder={date} type ="date" onChange={(e)=>setDate(e.target.value)} style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">{date}</p>:<Input placeholder={date} type ="date" onChange={(e)=>setDate(e.target.value)} style={{marginLeft:'50px', height:"30px", color:"#1F468B", width: "25vw"}}/>}
           </Col>
         </Row>
         <Row
@@ -137,7 +137,7 @@ const Info_screen = () => {
             {/* <b>Số X, đường Y, phường Z, quận A, thành phố B</b> */}
             {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">
               {address}
-              </p>:<input placeholder={address} onChange={(e)=>setAddress(e.target.value)} style={{marginLeft:'50px', height:"30px", width:"35vw", color:"#1F468B"}}/>}
+              </p>:<Input placeholder={address} onChange={(e)=>setAddress(e.target.value)} style={{marginLeft:'50px', height:"30px", width:"35vw", color:"#1F468B", width: "25vw"}}/>}
           </Col>
         </Row>
         <Row
@@ -155,8 +155,8 @@ const Info_screen = () => {
             <b>Số điện thoại</b>
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
-          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">{phone}</p>:<input placeholder={phone} onChange={(e)=>setPhone(e.target.value)} style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
-          </Col>
+          {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} id="log">{phone}</p>:<Input placeholder={phone} onChange={(e)=>setPhone(e.target.value)} style={{marginLeft:'50px', height:"30px", color:"#1F468B", width: "25vw"}}/>}
+         </Col>
         </Row>
         <Row
           style={{
@@ -174,7 +174,7 @@ const Info_screen = () => {
           </Col>
           <Col span={18} style={{ color: "#1F468B" }}>
           {hide?<p style={{marginLeft:'50px', width:"100%", height:"50px", fontWeight : "bold"}} >******</p>
-          :<input placeholder={password} onChange={(e)=>setPassword(e.target.value)} type = "password" style={{marginLeft:'50px', height:"30px", color:"#1F468B"}}/>}
+          :<Input placeholder={password} onChange={(e)=>setPassword(e.target.value)} type = "password" style={{marginLeft:'50px', height:"30px", color:"#1F468B", width: "25vw"}}/>}
           </Col>
         </Row>
         <Button

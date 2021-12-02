@@ -33,6 +33,7 @@ function TeacherScreen() {
     <div
       style={{
         overflowX: "hidden",
+        // overflowY: "hidden",
         margin: "0auto",
       }}
     >

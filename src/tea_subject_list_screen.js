@@ -57,11 +57,11 @@ const Class_content = () => {
           marginTop: "3vh",
         }}
       >
-      <Subject name="NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1"
+      <Subject name="NH 2021 - 2022 - Toán 12 - Nguyễn Văn A - Lớp 12A1"
               link="/teachersubject/12A1" />
-      <Subject name="NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A3"
+      <Subject name="NH 2021 - 2022 - Toán 12 - Nguyễn Văn A - Lớp 12A3"
               link="/teachersubject/12A3" />
-      <Subject name="NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A7"
+      <Subject name="NH 2021 - 2022 - Toán 12 - Nguyễn Văn A - Lớp 12A7"
               link="/teachersubject/12A7" />
         
       </div>
