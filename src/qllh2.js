@@ -109,10 +109,10 @@ function App () {
                     expandIcon={<CaretDownOutlined style={styleIcon}/>}
                 >
                     <SubMenu 
-                        title='NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A7'
+                        title='NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 11A7'
                     >
-                        <Link to="/classmanage1"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1</Menu.Item></Link>
-                        <Link to="/classmanage3"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A3</Menu.Item></Link>
+                        <Link to="/classmanage1"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 11A1</Menu.Item></Link>
+                        <Link to="/classmanage3"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 11A3</Menu.Item></Link>
                         <Link to="/createclass"><Menu.Item style={styleAdd}><b>Thêm lớp học</b></Menu.Item></Link>
                     </SubMenu>
                 </Menu>

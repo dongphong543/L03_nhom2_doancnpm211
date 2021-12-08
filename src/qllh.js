@@ -109,10 +109,10 @@ function App () {
                     expandIcon={<CaretDownOutlined style={styleIcon}/>}
                 >
                     <SubMenu 
-                        title='NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A1'
+                        title='NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 11A1'
                     >
-                        <Link to="/classmanage3"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A3</Menu.Item></Link>
-                        <Link to="/classmanage7"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A7</Menu.Item></Link>
+                        <Link to="/classmanage3"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 11A3</Menu.Item></Link>
+                        <Link to="/classmanage7"><Menu.Item style={style}>NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 11A7</Menu.Item></Link>
                         <Link to="/createclass"><Menu.Item style={styleAdd}><b>Thêm lớp học</b></Menu.Item></Link>
                     </SubMenu>
                 </Menu>
@@ -156,17 +156,19 @@ function App () {
                             <List.Item
                                 extra={
                                 <List>
-                                    <Button style={styleButton1} onClick={() => { 
-                                        setDataSource(dataSource => 
-                                            dataSource.filter((data) => data.id !== item.id)
+                                    <Button style={styleButton1} onClick={() => {                  
+                                        if (window.confirm("Bạn có chắc muốn ĐUỔI học sinh này ?")) 
+                                            setDataSource(dataSource => 
+                                                dataSource.filter((data) => data.id !== item.id)
                                         );
                                     }}>
                                         Kick
                                     </Button>
                                     <Button style={styleButton2} onClick={() => { 
-                                        setDataSource(dataSource => 
-                                            dataSource.filter((data) => data.id !== item.id)
-                                        );
+                                        if (window.confirm("Bạn có chắc muốn CẤM học sinh này ?")) 
+                                            setDataSource(dataSource => 
+                                                dataSource.filter((data) => data.id !== item.id)
+                                            );
                                     }}>
                                         Ban
                                     </Button>

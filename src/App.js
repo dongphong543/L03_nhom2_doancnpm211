@@ -53,9 +53,9 @@ function App() {
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/shome" element={<StuUI />} />
           <Route exact path="/home" element={<TeaUI />} />
-          <Route exact path="/teachersubject/12A1" element={<TeaClass1 />} />
-          <Route exact path="/teachersubject/12A3" element={<TeaClass2 />} />
-          <Route exact path="/teachersubject/12A7" element={<TeaClass3 />} />
+          <Route exact path="/teachersubject/11A1" element={<TeaClass1 />} />
+          <Route exact path="/teachersubject/11A3" element={<TeaClass2 />} />
+          <Route exact path="/teachersubject/11A7" element={<TeaClass3 />} />
           <Route exact path="/studentsubject/class1" element={<StuClass1 />} />
           <Route exact path="/studentsubject/class2" element={<StuClass2 />} />
           <Route exact path="/studentsubject/class3" element={<StuClass3 />} />
