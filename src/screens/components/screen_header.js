@@ -5,10 +5,17 @@ import NavBar from "../../navbar";
 
 function ScreenHeader(props) {
   return (
-    <div className="header">
-      <NavBar pageName={props.name}
-              path={props.path}
-              checkStu={props.checkStu}/>
+    <div
+      className="header"
+      style={{
+        overflowX: "hidden",
+      }}
+    >
+      <NavBar
+        pageName={props.name}
+        path={props.path}
+        checkStu={props.checkStu}
+      />
       {/* <b id="title">{props.name}</b> */}
     </div>
   );
