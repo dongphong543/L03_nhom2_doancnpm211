@@ -139,7 +139,7 @@ const Signup = () => {
                 height: "50px",
                 borderRadius: "8px",
                 marginTop: "10px",
-                fontSize: "13px",
+                fontSize: "16px",
               }}
               // defaultValue={moment("01/01/2001", "DD/MM/YYYY")}
               format={"DD/MM/YYYY"}
