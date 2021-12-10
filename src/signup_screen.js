@@ -130,15 +130,18 @@ const Signup = () => {
         </Row>
         <Row>
           <Col span="10">
-            <DatePicker
-              size="large"
-              style={{
+          <DatePicker
+            // <Input
+            //   type="date"
+            //   size="large"
+            //   allowClear="true"
+               style={{
                 height: "50px",
                 borderRadius: "8px",
                 marginTop: "10px",
                 fontSize: "16px",
               }}
-              defaultValue={moment("01/01/2001", "DD/MM/YYYY")}
+              // defaultValue={moment("01/01/2001", "DD/MM/YYYY")}
               format={"DD/MM/YYYY"}
             />
           </Col>
