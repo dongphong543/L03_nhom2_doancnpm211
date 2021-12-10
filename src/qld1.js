@@ -156,7 +156,7 @@ function App () {
         <div>
             <Navbar
                 pageName="Quản lý điểm" 
-                roomName="NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 12A3" 
+                roomName="NH 2021 - 2022 - Toán 11 - Nguyễn Văn A - Lớp 11A3" 
                 path={plus} 
                 checkStu={false}
             />

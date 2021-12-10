@@ -155,24 +155,24 @@ function App () {
                         renderItem={item => (   
                             <List.Item
                                 extra={
-                                <List>
-                                    <Button style={styleButton1} onClick={() => {                  
-                                        if (window.confirm("Bạn có chắc muốn ĐUỔI học sinh này ?")) 
-                                            setDataSource(dataSource => 
-                                                dataSource.filter((data) => data.id !== item.id)
-                                        );
-                                    }}>
-                                        Kick
-                                    </Button>
-                                    <Button style={styleButton2} onClick={() => { 
-                                        if (window.confirm("Bạn có chắc muốn CẤM học sinh này ?")) 
-                                            setDataSource(dataSource => 
-                                                dataSource.filter((data) => data.id !== item.id)
+                                    <List>
+                                        <Button style={styleButton1} onClick={() => {                  
+                                            if (window.confirm("Bạn có chắc muốn ĐUỔI học sinh này ?")) 
+                                                setDataSource(dataSource => 
+                                                    dataSource.filter((data) => data.id !== item.id)
                                             );
-                                    }}>
-                                        Ban
-                                    </Button>
-                                </List>
+                                        }}>
+                                            Kick
+                                        </Button>
+                                        <Button style={styleButton2} onClick={() => { 
+                                            if (window.confirm("Bạn có chắc muốn CẤM học sinh này ?")) 
+                                                setDataSource(dataSource => 
+                                                    dataSource.filter((data) => data.id !== item.id)
+                                            );
+                                        }}>
+                                            Ban
+                                        </Button>
+                                    </List>
                                 }
                             >
                                 {item.name + " - " + item.code}
